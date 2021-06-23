@@ -1,4 +1,4 @@
-## Java Homework 1
+## Markdown Homework 01
 
 * Write markdown file to take following class notes:
 

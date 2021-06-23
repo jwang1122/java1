@@ -7,7 +7,14 @@ package com.huaxia.java1;
  *
  */
 public class Print {
-
+	// instance method
+	int add(int x, int y) {
+		return x + y;
+	}
+	// class level method, or static method Print.sub(2, 3)
+	static int sub(int x, int y) {
+		return x - y;
+	}
 	/**
 	 * 
 	 * @param args is the argument come from the command line
