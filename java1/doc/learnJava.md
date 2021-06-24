@@ -37,3 +37,10 @@ class Hello {
 
 * ❓How to create a package?
 ✔️Right-click **src** folder > New > Package > enter package name
+
+* ❓How to create Java Class?
+✔️
+
+* ❓How to run java class?
+✔️
+
