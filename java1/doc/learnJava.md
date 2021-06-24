@@ -82,7 +82,7 @@ comment.
 * System.out.print(String);
 * System.out.printf(format, args);
 
-![](images/languageBasics.svg)
+![](images/languageBasics.png)
 
 ## Data Type
 [Data Type](../src/com/huaxia/java1/DataType.java)
