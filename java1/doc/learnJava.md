@@ -6,7 +6,7 @@
 - [Basic skills](#basic-skills)
 - [Comments](#comments)
 - [Print](#print)
-- [Data](#data)
+- [Data Type](#data-type)
 - [Operators](#operators)
 - [If-else](#if-else)
 - [Loop](#loop)
@@ -45,22 +45,22 @@ class Hello {
 * ❓What is the method signature?
 >✔️1. method name; 2. argument type and number of arguments; 3. maybe return type
 * ❓What are the modifiers?
-✔️
+>✔️
 
 * ❓Can I rename main method?
-✔️
+>✔️
 
 * ❓How to create a package?
-✔️Right-click **src** folder > New > Package > enter package name
+>✔️Right-click **src** folder > New > Package > enter package name
 
 * ❓How to create Java Class?
-✔️
+>✔️
 
 * ❓How to run java class?
-✔️
+>✔️
 
 * ❓How to rename a class file?
-
+>✔️
 
 ## Comments
 * Single line comment
@@ -84,7 +84,7 @@ comment.
 
 ![](images/languageBasics.svg)
 
-## Data 
+## Data Type
 [Data Type](../src/com/huaxia/java1/DataType.java)
 ```java
 	boolean flag = false; // true, false
