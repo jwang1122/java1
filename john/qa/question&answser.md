@@ -3,6 +3,7 @@
 [Markdown Shared Lib](../../java1/doc/myIcons.md)
 
 ❓How do I find number of letters in a string?
+
 ✔️ to get number of letters of a string, call length() method.
 ```java
     String s = "Hello";
@@ -12,6 +13,7 @@
 Expected out: 5
 
 ❓How do I know there is a length() method for a String?
+
 ✔️ Two answers below👇
 1. Ask your teacher
 2. [JDK API Website](https://docs.oracle.com/javase/8/docs/api/)
@@ -22,6 +24,7 @@ Expected out: 5
 This is better way, sence you are not lony find document about length method, you also find other interesting method you may need.
 
 ❓Why I always get <terminated> while I am runnint java program?
+
 ✔️ When the program finish running, Eclipse will show <terminated>. If you don **NOT** print out anything, there will be no output on the console at all.
 
 For example,
