@@ -4,7 +4,7 @@
 
 ❓How do I find number of letters in a string?
 
-✔️ to get number of letters of a string, call length() method.
+✔️ to get number of letters of a string, call **length()** method.
 ```java
     String s = "Hello";
     int numOfLetters = s.length();
@@ -12,7 +12,7 @@
 ```
 Expected out: 5
 
-❓How do I know there is a length() method for a String?
+❓How do I know there is a **length()** method for a String?
 
 ✔️ Two answers below👇
 1. Ask your teacher
@@ -21,7 +21,7 @@ Expected out: 5
     - scroll down Method Summary find length()
 ![](../../java1/doc/images/stringLength.png)
 
-This is better way, sence you are not lony find document about length method, you also find other interesting method you may need.
+This is a better way, sence you are not only find document about **length()** method, you also find other interesting methods you may need.
 
 ❓Why I always get <terminated> while I am runnint java program?
 

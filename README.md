@@ -11,6 +11,7 @@ This is a Java class for Houston Huaxia Chinese School.
 * [Markdown Shared Lib](java1/doc/myIcons.md)
 
 ## File Structure
+```output
 <project root>
     ├── 📝doc/
     |    ├── mistakes.md 
@@ -23,7 +24,7 @@ This is a Java class for Houston Huaxia Chinese School.
     ├── 🔥src/
     |      └── com/huaxia/java1/hello.java 
     └── 👉ReadMe.
-    
+``` 
 ## Learning Life Cycle
 ```mermaid
 graph TB
