@@ -23,7 +23,7 @@ This is a Java class for Houston Huaxia Chinese School.
     ├── amy/ (another student folder)
     ├── 🔥src/
     |      └── com/huaxia/java1/Hello.java 
-    └── 👉ReadMe.
+    └── 👉ReadMe.md
 ``` 
 ## Learning Life Cycle
 ```mermaid
