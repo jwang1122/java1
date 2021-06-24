@@ -4,7 +4,7 @@ package com.huaxia.connortan.homeworks;
 public class LoopHW1 {
 
 	public static void main(String[] args) {
-		System.out.println("enven number:");
+		System.out.println("even number:");
 		for (int i = 1; i <= 10; i++) { // for loop code block
 			if (i % 2 == 0) {
 				System.out.println(i);
