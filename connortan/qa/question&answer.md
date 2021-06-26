@@ -2,4 +2,4 @@
 []((../../java1/doc/myIcons.md)
 
 ✔️❌
-❓ How to put the homework in git hub so you can see?
+❓ How to put the homework in github so you can see?
