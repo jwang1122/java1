@@ -14,18 +14,20 @@ Expected out: 5
 
 ❓How do I know there is a **length()** method for a String?
 
-✔️ Two answers below👇
-1. Ask your teacher
-2. [JDK API Website](https://docs.oracle.com/javase/8/docs/api/)
-    - scroll down **All Classes** find String
-    - scroll down Method Summary find length()
-![](../../java1/doc/images/stringLength.png)
+>✔️ Two answers below👇
+    1. Ask your teacher
+    2. [JDK API Website](https://docs.oracle.com/javase/8/docs/api/)
+        - scroll down **All Classes** find **String**
+        - scroll down **Method Summary** find **length()**
+    ![](../../java1/doc/images/stringLength.png)
+    This is a better way, sence you are not only find document about **length()** method, you also find other interesting methods you may need.
 
-This is a better way, sence you are not only find document about **length()** method, you also find other interesting methods you may need.
+❓Why I always get **terminated** while I am running java program?
 
-❓Why I always get <terminated> while I am runnint java program?
+>✔️ When the program finish running, Eclipse will show **terminated**. If you 
+[](../../java1/doc/myIcons.md)
 
-✔️ When the program finish running, Eclipse will show <terminated>. If you don **NOT** print out anything, there will be no output on the console at all.
+don **NOT** print out anything, there will be no output on the console at all.
 
 For example,
 ```java
