@@ -4,7 +4,7 @@ public class Loop {
 
 	public static void main(String[] args) {
 		// for loop syntax, i is defined within for loop scope
-		for (int i=2; i<=10; i+=2) {
+		for (int i=2; i<=10; i++) {
 			System.out.print(i + ", ");
 		}
 		System.out.println();
