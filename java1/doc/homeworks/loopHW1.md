@@ -1,4 +1,4 @@
-# Print numbers on condition
+# Print numbers on condition (requirement, specification, spec). AS(Application Specialist) provide this document: 
 
 1. print even number within 1 to 10 by using for loop and if condition;
 2. print odd number within 1 to 10 by using for loop and if condition;
