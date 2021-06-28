@@ -18,8 +18,5 @@ git config user.email "jwang1122@gmail.comn"
 4. pull first
 5. push
 
-<<<<<<< HEAD
 ✔️❌
 ❓ How to put the homework in github so you can see?
-=======
->>>>>>> 1bed1a91271a850738bd68b3a5c5f8532e15aab0
