@@ -28,3 +28,8 @@ Ctrl+Shift+f
 
 * ❓How to run java class?
 ✔️
+
+* ❓When I pull project from github, my source code no longer compile?
+✔️The reason for this is due to local project setting such as .class file and .project file, and .settings folder
+* copy/paste **.class** file
+* remove .settings folder

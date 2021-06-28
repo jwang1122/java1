@@ -1,4 +1,4 @@
-package src.com.huaxia.java1.homeworks;
+package com.huaxia.java1.homeworks;
 
 public class LoopHW2 {
 
