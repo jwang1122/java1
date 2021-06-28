@@ -9,6 +9,7 @@ public class LoopHW5 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter a word:");
 		String word = input.nextLine();
+		input.close();
 		String reverse = "";
 		for(int i = word.length() - 1; i >= 0; i--) 
 		{

@@ -7,6 +7,7 @@ public class LoopHW11 {
 	public static void main(String[] args) 
 	{
 		Scanner input = new Scanner(System.in);
+		input.close();
 		System.out.println("Enter the length of the list:");
 		int length = input.nextInt();
 		int[] list = new int [length];
