@@ -1,6 +1,6 @@
 package com.huaxia.hongkai.homework;
 
-public class BankAccountHW {
+public class BankAccount {
 	
 	/* Assign 'bankAmount' float
 	 * Assign 'str1' string to string including 'bankAmount' float
