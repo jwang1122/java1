@@ -1,4 +1,4 @@
-package com.huaxia.hongkai.LoopHW;
+package com.huaxia.hongkai.loopHW;
 
 /**
  * 1. Given a number count the total number of digits in a number
