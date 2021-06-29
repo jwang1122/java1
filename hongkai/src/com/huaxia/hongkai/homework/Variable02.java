@@ -1,6 +1,6 @@
 package com.huaxia.hongkai.homework;
 
-public class ShoppingListHW {
+public class Variable02 {
 
 	public static void main(String[] args) {
 		// set variable dataType
