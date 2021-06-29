@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/com/huaxia/connortan/homeworks/variable01.md</name>
+			<type>1</type>
+			<location>C:/Users/cyxt2/OneDrive/Download/variable01.md</location>
+		</link>
+	</linkedResources>
 </projectDescription>

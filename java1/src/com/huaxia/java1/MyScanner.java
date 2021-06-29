@@ -15,7 +15,7 @@ public class MyScanner {
 		String lastName = sa[1];
 		int age = Integer.parseInt(sa[2]);
 		age += 5;
-		String id = sa[3];
+//		String id = sa[3];
 		System.out.println(firstName+" " + lastName + " after 5 years will be " + age +" years old.");
 	}
 

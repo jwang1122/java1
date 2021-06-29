@@ -1,5 +1,11 @@
 package com.huaxia.laura.homeworks;
 
+/**
+ * Better explain what your application for
+ * 
+ * @author John
+ *
+ */
 public class LoopHW3 
 {
 
