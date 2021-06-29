@@ -16,7 +16,8 @@ public class HarmoneySchoolMath {
 		System.out.println(too);
 		//3
 		int e = 1296;
-		String tree = String.format("Problem 3: The tens digit of %d is {f}", e);
+		String f = "Error";
+		String tree = String.format("Problem 3: The tens digit of %d is %d", e,f);
 		System.out.println(tree);
 		//4
 		int g = 60, h = 5;
