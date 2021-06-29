@@ -1,4 +1,4 @@
-package com.huaxia.java1;
+package com.huaxia.hongkai;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class MyScanner {
 
 	public static void main(String[] args) {
 		Scanner inputFromConsole = new Scanner(System.in);
-		System.out.print("Enter your data(firstName,lastName,age,id): ");
+		System.out.print("Enter your data(firstName,lastName,age,ID): ");
 		String data = inputFromConsole.nextLine();
 		inputFromConsole.close();
 
@@ -15,8 +15,9 @@ public class MyScanner {
 		String lastName = sa[1];
 		int age = Integer.parseInt(sa[2]);
 		age += 5;
-//		String id = sa[3];
-		System.out.println(firstName+" " + lastName + " after 5 years will be " + age +" years old.");
+		String ID = sa[3];
+		System.out.println(firstName + " " + lastName + " after 5 years will be " + age + " years old. Their ID is " + ID + ".");
+
 	}
 
 }
