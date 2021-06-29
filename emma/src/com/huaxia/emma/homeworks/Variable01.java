@@ -1,25 +1,21 @@
 package com.huaxia.emma.homeworks;
-/** 
- * My application shows the amount of money left in your bank account after three withdrawals 
- * @author user
- *
- */
+
 public class Variable01 {
+	/**
+	 * 
+	 * My application shows how much money left in your bank account after withdrawals. 
+	 * @param args
+	 */
 
 	public static void main(String[] args) {
 		int bankAmount=100;
 		int withdrawOne=25;
 		int withdrawTwo=30;
 		int withdrawThree=15;
-		bankAmount-=bankAmount-withdrawOne;
-		bankAmount-=bankAmount-withdrawTwo;
-		bankAmount-=bankAmount-withdrawThree;
+		bankAmount -= withdrawOne; 
+		bankAmount-= withdrawTwo; 
+		bankAmount -= withdrawThree; 
 		System.out.println(bankAmount + " dollars is left");
-		
-		
-	
-		
-				 
 	}
 
 }
