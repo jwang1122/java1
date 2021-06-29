@@ -1,5 +1,10 @@
 package com.huaxia.hongkai.homework;
-
+/**
+ * refer to homeworks: variable01.md
+ * 
+ * @author Hongkai
+ *
+ */
 public class BankAccount {
 	
 	/* Assign 'bankAmount' float

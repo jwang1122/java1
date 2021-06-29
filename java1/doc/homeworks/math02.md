@@ -8,7 +8,9 @@ For given radius = 3
 
 Expected output:
 
-The circle area with radius=3 is 28.274333882308138.
-
+```output
+Enter radius of a circle(1.1): 1.111
+The circle area with radius=1.111 is 3.878.
+```
 
 

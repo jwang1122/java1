@@ -1,6 +1,6 @@
 package com.huaxia.laura.homeworks;
 
-public class ShoppingList {
+public class Variable02 {
 
 	public static void main(String[] args) 
 	{
