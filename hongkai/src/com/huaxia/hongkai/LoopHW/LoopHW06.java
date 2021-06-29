@@ -1,6 +1,6 @@
 // this isn't working as intended. Still under construction... Just skip to LoopHW07.java
 
-package com.huaxia.hongkai.homework.LoopHW;
+package com.huaxia.hongkai.LoopHW;
 
 import java.util.Scanner;
 /**

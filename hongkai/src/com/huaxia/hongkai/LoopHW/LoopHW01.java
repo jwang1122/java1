@@ -1,4 +1,4 @@
-package com.huaxia.hongkai.homework.LoopHW;
+package com.huaxia.hongkai.LoopHW;
 
 // public class name must match with the file name
 public class LoopHW01 {
