@@ -1,6 +1,6 @@
-package com.huaxia.java1;
+package com.huaxia.laura.homeworks;
 
-public class BankAccount {
+public class Variable01 {
 
 	public static void main(String[] args) 
 	{

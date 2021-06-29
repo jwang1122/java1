@@ -1,4 +1,4 @@
-package com.huaxia.hongkai.homework.LoopHW;
+package com.huaxia.hongkai.loopHW;
 
 public class LoopHW07 {
 
@@ -19,3 +19,5 @@ public class LoopHW07 {
 	}
 
 }
+
+//there is no loop06 :)
