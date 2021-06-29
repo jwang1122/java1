@@ -19,3 +19,5 @@ public class LoopHW07 {
 	}
 
 }
+
+//there is no loop06 :)
