@@ -1,5 +1,7 @@
 package com.huaxia.laura.homeworks;
 
+// variable 02 hw
+
 public class ShoppingList {
 
 	public static void main(String[] args) 
