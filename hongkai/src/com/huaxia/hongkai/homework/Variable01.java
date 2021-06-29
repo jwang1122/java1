@@ -5,7 +5,7 @@ package com.huaxia.hongkai.homework;
  * @author Hongkai
  *
  */
-public class BankAccount {
+public class Variable01 {
 	
 	/* Assign 'bankAmount' float
 	 * Assign 'str1' string to string including 'bankAmount' float
