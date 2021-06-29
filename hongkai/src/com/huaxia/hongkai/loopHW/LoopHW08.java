@@ -1,4 +1,4 @@
-package com.huaxia.hongkai.loopHW;
+package com.huaxia.hongkai.LoopHW;
 
 import java.util.Scanner;
 
