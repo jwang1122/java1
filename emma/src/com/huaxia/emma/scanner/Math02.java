@@ -18,7 +18,7 @@ public class Math02 {
 		double r = input.nextDouble();
 		input.close();
 		double a = Math.PI* Math.pow(r, 2);
-		System.out.printf(" The circle area with radius=%.3d is %.3d. ", r, a);
+		System.out.printf(" The circle area with radius=%.3f is %.3f. ", r, a);
 	}
 
 }

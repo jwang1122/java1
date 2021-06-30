@@ -4,9 +4,10 @@ public class LoopHW4 {
 
 	public static void main(String[] args) {
 		{
-			for (char i = 1; i <= 5; i++) { // for loop code block
-				if (i/5==0)
+			int i=4;
+			for (int i1 = 1; i1 <= 5; i1++) { // for loop code block
 				System.out.println("*");
+				System.out.print("");
 			}
 		}
 	}
