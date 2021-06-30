@@ -15,4 +15,3 @@ public class LoopHW11 {
 	}
 
 }
- 
