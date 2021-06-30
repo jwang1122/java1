@@ -7,3 +7,5 @@ Expected output:
 55
 75
 150
+180
+200

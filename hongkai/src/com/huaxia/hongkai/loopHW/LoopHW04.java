@@ -1,5 +1,21 @@
 package com.huaxia.hongkai.loopHW;
 
+/**
+ * output pattern:
+ * * 
+ * * 
+ * * * 
+ * * * * 
+ * * * * * 
+ * * * * 
+ * * * 
+ * * 
+ * 
+ * @see loopHW04.md
+ * 
+ * @author John
+ *
+ */
 public class LoopHW04 {
 
 	public static void main(String[] args) {
@@ -12,7 +28,5 @@ public class LoopHW04 {
 			}
 			System.out.println();
 		}
-
 	}
-
 }
