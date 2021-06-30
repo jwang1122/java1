@@ -1,5 +1,7 @@
 package com.huaxia.hongkai.loopHW;
 
+import java.util.Scanner;
+
 /**
  * 1. Given a number count the total number of digits in a number
  * 
@@ -13,7 +15,10 @@ package com.huaxia.hongkai.loopHW;
 public class LoopHW12 {
 
 	public static void main(String[] args) {
-
+		Scanner input = new Scanner(System.in);
+		String n = input.nextLine();
+		input.close();
+		System.out.println(n.length());
 	}
 
 }
