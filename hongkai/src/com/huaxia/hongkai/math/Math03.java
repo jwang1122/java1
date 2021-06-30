@@ -17,6 +17,7 @@ public class Math03 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a radius of a circle: ");
 		double r = input.nextDouble();
 		input.close();
 		double c = 2*Math.PI*r;
