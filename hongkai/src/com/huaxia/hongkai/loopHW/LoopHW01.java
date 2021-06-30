@@ -1,4 +1,4 @@
-package com.huaxia.hongkai.LoopHW;
+package com.huaxia.hongkai.loopHW;
 
 // public class name must match with the file name
 public class LoopHW01 {
