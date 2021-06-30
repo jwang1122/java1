@@ -16,7 +16,7 @@ public class Variable02 {
 		double totalCost = bunchofApples + loavesOfBread + bunchOfOranges;
 		System.out.println("The total cost of 5 apples, 10 loaves of bread, and 11 oranges is $" + totalCost + "0.");
 		String output = String.format("The total cost of %d apples, %d loaves of bread and %d oranges, is $%.2f.",
-				appleAmount,breadAmount,orangeAmount,totalCost);
+				appleAmount, breadAmount, orangeAmount, totalCost);
 		System.out.println(output);
 
 		double a, b;
@@ -34,16 +34,13 @@ public class Variable02 {
 
 // Variable 01 is below 
 
-			int xx=11;
-			int yy=5;
-			System.out.printf("11 oranges is %d*%d=%d dollars", 11, 5, (xx*yy));
-			
-		//This application shows the amount left in the bank account after withdrawls 
-			//int bankAmount2=100;
-		
-		}
+		int xx = 11;
+		int yy = 5;
+		System.out.printf("11 oranges is %d*%d=%d dollars", 11, 5, (xx * yy));
 
-}
-	
+		// This application shows the amount left in the bank account after withdrawls
+		// int bankAmount2=100;
+
+	}
 
 }
