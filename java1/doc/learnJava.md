@@ -96,6 +96,9 @@ comment.
 	float x = 129.3F; // f or F on the end
 	double y = 12.3;
 ```
+The above data is in the order of the container size.
+
+You can assign small value to bigger container, but cannot assign big value to smaller container. If you know what you are doing, you can cast big value to smaller container, which may truncation your data.
 
 ## Operators
 * [Operator](../src/com/huaxia/java1/Operator.java)
@@ -107,7 +110,7 @@ comment.
 * Ternary Operator a>b?a:b
 
 ## If-else
-* [if-else if-else](../src/com/huaxia/java1/IfElse.java)
+* [if, if-else, if-else if-else](../src/com/huaxia/java1/IfElse.java)
 
 ## Loop
 * [for loop](../src/com/huaxia/java1/Loop.java)
