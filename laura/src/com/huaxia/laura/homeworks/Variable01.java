@@ -2,7 +2,7 @@ package com.huaxia.laura.homeworks;
 
 // variable01 hw
 
-public class BankAccount {
+public class Variable01 {
 
 	public static void main(String[] args) 
 	{

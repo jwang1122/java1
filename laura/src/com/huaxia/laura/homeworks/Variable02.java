@@ -2,7 +2,7 @@ package com.huaxia.laura.homeworks;
 
 // variable 02 hw
 
-public class ShoppingList {
+public class Variable02 {
 
 	public static void main(String[] args) 
 	{
