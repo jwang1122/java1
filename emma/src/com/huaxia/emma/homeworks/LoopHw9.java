@@ -18,5 +18,5 @@ public static void main(String[] args)
 
 		System.out.println(number + " raised to the power of " + power +" will be " + answer +".");
 }
-}
+}//
 	

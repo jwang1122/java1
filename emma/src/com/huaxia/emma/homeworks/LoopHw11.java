@@ -10,7 +10,7 @@ public class LoopHw11 {
 			int element = array1[i];
 			if (element % 5 ==0);
 			System.out.println(element);
-				
+				//idk just tryna commit this 
 	//must be 1.0 
 		}
 
