@@ -14,12 +14,4 @@ public class LoopHW3 {
 		System.out.printf(format,  number, fact); //this line of code is very stable 
 	}
 
-		for (int i = 1; i <= 6; i++) {
-			fact = fact * i;
-		}
-		System.out.println("Factorial of " + number + " is: " + fact);
-		System.out.printf("Factorial of %d is: %d\n", number, fact);
-		String format = "Factorial of %d is: %d\n";
-		System.out.printf(format, number, fact); // this line of code is very stable.
-	}
 }
