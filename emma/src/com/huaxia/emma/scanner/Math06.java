@@ -11,7 +11,7 @@ public class Math06 {
 		double h= input.nextDouble();
 		input.close(); {
 		double sa = 2*Math.PI*Math.pow(r,2)+h*2*Math.PI*r;
-		System.out.printf("The cylinders surface area with radius=%.3f and height=%.3f is %.3f.", r, h, sa);
+		System.out.printf("The cylinders surface area with a radius=%.3f and height=%.3f is %.3f.", r, h, sa);
 	}
 
 }
