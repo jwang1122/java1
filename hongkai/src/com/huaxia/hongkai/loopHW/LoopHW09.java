@@ -18,14 +18,14 @@ import java.util.Scanner;
 public class LoopHW09 {
 	public static void main(String[] args) {
 		Scanner inputFromConsole = new Scanner(System.in);
-		System.out.println("Input base number");
+		System.out.println("Enter the base number");
 		int n1 = inputFromConsole.nextInt();
-		System.out.println("Input exponent number");
+		System.out.println("Enter the power: ");
 		int n2 = inputFromConsole.nextInt();
 		inputFromConsole.close();
 		int n3 = 1;
 		for (int i = 1; i <= n2; ++i) {n3 *= n1;}
-		System.out.printf("%d to the power of %d is %d", n1, n2, n3);
+		System.out.printf("Result: %d", n3);
 	}
 
 }
