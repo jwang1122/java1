@@ -17,6 +17,7 @@ public class LoopHw9 {
 		double power = input.nextInt();
 		input.close();
 		double answer = Math.pow(number, power);
+		input.close();
 
 		System.out.println(number + " raised to the power of " + power + " will be " + answer + ".");
 	}

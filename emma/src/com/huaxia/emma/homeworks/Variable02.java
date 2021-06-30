@@ -34,31 +34,16 @@ public class Variable02 {
 
 // Variable 01 is below 
 
-		int x = 11;
-		int y = 5;
-		System.out.printf("11 oranges is %d*%d=%d dollars", 11, 5, (x * y));
+			int xx=11;
+			int yy=5;
+			System.out.printf("11 oranges is %d*%d=%d dollars", 11, 5, (xx*yy));
+			
+		//This application shows the amount left in the bank account after withdrawls 
+			//int bankAmount2=100;
+		
+		}
 
-		// This application shows the amount left in the bank account after withdrawls
-		int bankAmount = 100;
-		a = 25;
-		double aa = bankAmount - a;
-		b = 30;
-		double bb = aa - b;
-		c = 15;
-		System.out.printf("\nThe first withdrawl of 25 dollars leaves the total to be %s-%s=%s. \n", 100, 25,
-				(bankAmount - a));
-		System.out.printf("\nThe second withdrawl of 30 dollars leaves the total to be %s-%s=%s. \n", 75, 30, (aa - b));
-		System.out.printf("\nThe third withdrawl of 15 dollars leaves the final total to be %s-%s=%s. \n", 45, 15,
-				(bb - c));
-		System.out.println("The total amount left in the bank acount is 30 dollars.");
-
-		int xx = 11;
-		int yy = 5;
-		System.out.printf("11 oranges is %d*%d=%d dollars", 11, 5, (xx * yy));
-
-		// This application shows the amount left in the bank account after withdrawls
-//		int bankAmount2 = 100;
-
-	}
+}
+	
 
 }
