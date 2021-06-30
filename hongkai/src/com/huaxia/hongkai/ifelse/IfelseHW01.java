@@ -51,7 +51,7 @@ public class IfelseHW01 {
 			leap = false;
 		}
 		String str1 = "";
-		if (leap != true) {
+		if (leap == false) {
 			str1 = " NOT";
 		}
 		String str2 = "%d is%s a leap year.";
