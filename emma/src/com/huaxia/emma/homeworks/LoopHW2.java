@@ -8,7 +8,7 @@ public class LoopHW2 {
 			for(int i = 2; i <=10; i++) 
 			{
 			//	if (i/2==1); only use if to prove true or false 
-				System.out.print(i); 
+				System.out.printf("%.2f\n", 1.0/i); 
 
 			}
 		}
