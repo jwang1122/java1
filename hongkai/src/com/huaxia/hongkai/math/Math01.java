@@ -20,7 +20,7 @@ public class Math01 {
 		double r = input.nextDouble();
 		input.close();
 		double d = 2*r;
-		System.out.printf("The circle diameter with radius=%.3f is %.3f",r,d);
+		System.out.printf("The circle diameter with radius=%.3f is %.3f.",r,d);
 		
 
 	}
