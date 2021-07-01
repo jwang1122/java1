@@ -5,7 +5,6 @@
 - [First Java Program](#first-java-program)
 - [Basic skills](#basic-skills)
 - [Comments](#comments)
-- [Print](#print)
 - [Data Type](#data-type)
 - [Operators](#operators)
 - [If-else](#if-else)
@@ -42,25 +41,25 @@ class Hello {
 ```
 
 ## Basic skills
-* ❓What is the method signature?
->✔️1. method name; 2. argument type and number of arguments; 3. maybe return type
-* ❓What are the modifiers?
->✔️
+* â�“What is the method signature?
+>âœ”ï¸�1. method name; 2. argument type and number of arguments; 3. maybe return type
+* â�“What are the modifiers?
+>âœ”ï¸�
 
-* ❓Can I rename main method?
->✔️
+* â�“Can I rename main method?
+>âœ”ï¸�
 
-* ❓How to create a package?
->✔️Right-click **src** folder > New > Package > enter package name
+* â�“How to create a package?
+>âœ”ï¸�Right-click **src** folder > New > Package > enter package name
 
-* ❓How to create Java Class?
->✔️
+* â�“How to create Java Class?
+>âœ”ï¸�
 
-* ❓How to run java class?
->✔️
+* â�“How to run java class?
+>âœ”ï¸�
 
-* ❓How to rename a class file?
->✔️
+* â�“How to rename a class file?
+>âœ”ï¸�
 
 ## Comments
 * Single line comment
@@ -98,7 +97,7 @@ comment.
 ```
 The above data is in the order of the container size.
 
-You can assign small value to bigger container, but cannot assign big value to smaller container. If you know what you are doing, you can cast big value to smaller container, which may truncation your data.
+You can assign small value to bigger container, but cannot assign big value to smaller container. If you know what you are doing, you can cast big value to smaller container, which may truncat your data.
 
 ## Operators
 * [Operator](../src/com/huaxia/java1/Operator.java)
