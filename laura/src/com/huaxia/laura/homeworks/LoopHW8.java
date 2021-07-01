@@ -7,6 +7,7 @@ public class LoopHW8 {
 	public static void main(String[] args) 
 	{
 		Scanner input = new Scanner(System.in);
+		input.close();
 		System.out.println("Enter any positive integer:");
 		int num = input.nextInt();
 		int value = 0;
