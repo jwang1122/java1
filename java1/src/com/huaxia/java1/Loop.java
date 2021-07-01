@@ -1,4 +1,4 @@
-package src.com.huaxia.java1;
+package com.huaxia.java1;
 
 public class Loop {
 
