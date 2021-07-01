@@ -1,6 +1,5 @@
 package com.huaxia.laura.homeworks;
 
-// variable01 hw
 
 public class Variable01 {
 
