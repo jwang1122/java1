@@ -7,6 +7,7 @@ public class LoopHW6 {
 	public static void main(String[] args) 
 	{
 		Scanner input = new Scanner(System.in);
+		input.close();
 		System.out.println("Enter a number: ");
 		int number = input.nextInt();
 		int total = 0;

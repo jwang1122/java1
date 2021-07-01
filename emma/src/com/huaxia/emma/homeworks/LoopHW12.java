@@ -12,3 +12,4 @@ public class LoopHW12 {
 		System.out.println(count);
 	}
 }
+//c
