@@ -30,7 +30,7 @@ int 1a = 0; // 1a is invailid variable name, cause Syntax error
 [Java Reserve Keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html)
 
 ## First Java Program
-[Hello.java](../src/com/huaxia/java1/Hello.java)
+[Hello.java](../../hongkai/src/com/huaxia/hongkai/Hello.java)
 ```java
 class Hello {
 	// my main method to run this class
@@ -77,7 +77,7 @@ comment.
 */
 ```
 ## Print
-* [System.out.print](../src/com/huaxia/java1/Print.java)
+* [System.out.print](../../hongkai/src/com/huaxia/hongkai/Print.java)
 * System.out.println(String);
 * System.out.print(String);
 * System.out.printf(format, args);
@@ -85,7 +85,7 @@ comment.
 ![](./images/languageBasics.png)
 
 ## Data Type
-[Data Type](../src/com/huaxia/java1/DataType.java)
+[Data Type](../../hongkai/src/com/huaxia/hongkai/DataType.java)
 ```java
 	boolean flag = false; // true, false
 	byte myByte = 127; // 8 bits, -128~127
@@ -98,7 +98,7 @@ comment.
 ```
 
 ## Operators
-* [Operator](../src/com/huaxia/java1/Operator.java)
+* [Operator](../../hongkai/src/com/huaxia/hongkai/Operators.java)
 * Arithmetic operator +, -, *, /, %
 * Compound assignment operator +=, -=, *=, /=, %=
 * Binary operator ++, --
@@ -107,8 +107,8 @@ comment.
 * Ternary Operator a>b?a:b
 
 ## If-else
-* [if-else if-else](../src/com/huaxia/java1/IfElse.java)
+* [if-else if-else](../../hongkai/src/com/huaxia/hongkai/IfElse.java)
 
 ## Loop
-* [for loop](../src/com/huaxia/java1/Loop.java)
+* [for loop](../../hongkai/src/com/huaxia/hongkai/Loop.java)
 * [while loop]()
