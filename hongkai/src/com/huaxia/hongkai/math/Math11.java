@@ -25,19 +25,32 @@ import java.util.Scanner;
  *
  */
 
-public class Math11 { // INCOMPLETE INCOMPLETE INCOMPLETE INCOMPLETE INCOMPLETE INCOMPLETE INCOMPLETE INCOMPLETE 
+public class Math11 { // INCOMPLETE INCOMPLETE INCOMPLETE INCOMPLETE INCOMPLETE INCOMPLETE INCOMPLETE
+						// INCOMPLETE
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		System.out.print("Please enter C or F: ");
+		String unit = input.nextLine();
 		System.out.print("Please enter a temperature: ");
-		String temp = input.nextLine();
+		double temp1 = input.nextDouble();
 		input.close();
-		if (temp.contains("F") || temp.contains("f")) {
-			System.out.println("farinheight°F");
+		double temp2 = 0;
+		String str1 = "";
+		
+		System.out.println(unit);
+		System.out.println(unit!="C");
+		
+		if (unit == "f" || unit == "F") {
+			System.out.println("F");
+			temp2 = (temp1 - 32) * 5 / 9;
+			str1 = "The temperature in Celsius %f°C is %f°F in Fahrenheit.";
 
-		} else if (temp.contains("C") || temp.contains("c")) {
-			System.out.println("celsiyus°C");
+		} else if (unit == "c" || unit == "C") {
+			temp2 = (temp1 + 32) * 9 / 5;
+			str1 = "The temperature in Fahrenheit %f°F is %f°C in Celsius.";
 		}
+		System.out.printf(str1, temp1, temp2);
 
 	}
 

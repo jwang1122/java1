@@ -8,6 +8,7 @@ public class LoopHW9
 	public static void main(String[] args) 
 	{
 		Scanner input = new Scanner(System.in);
+		input.close();
 		System.out.println("Enter numbers:(number power):");
 		double number = input.nextInt();
 		double power = input.nextInt();

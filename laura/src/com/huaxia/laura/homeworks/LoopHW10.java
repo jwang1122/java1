@@ -8,6 +8,7 @@ public class LoopHW10
 	public static void main(String[] args) 
 	{
 		Scanner userInput = new Scanner(System.in);
+		userInput.close();
 		System.out.println("Enter an integer number: ");
 		int num = userInput.nextInt();
 		int total = 0;
