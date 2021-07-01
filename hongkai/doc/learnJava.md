@@ -2,6 +2,7 @@
 
 - [Java API Documentation](#java-api-documentation)
 - [Variable naming](#variable-naming)
+- [Variable and Memory](#variable-and-memory)
 - [First Java Program](#first-java-program)
 - [Basic skills](#basic-skills)
 - [Comments](#comments)
@@ -28,6 +29,13 @@ int 1a = 0; // 1a is invailid variable name, cause Syntax error
 ![](images/javaKeywords.png)
 
 [Java Reserve Keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html)
+
+## Variable and Memory
+![](images/chineseMedicine.jpg)
+The computer memory is something similar as Chinese medicine drawer. You can put something in the drawer. and then you can get what yuo put in, the only difference is, once you put stuff in the computer memory, you can get as many as you want; but the medicine drawer will be empty once you take out too much.
+
+![](images/memory.gif)
+create a variable just like put a label on the drawer, so you can put more than one labels on the same drawer, or no label at all
 
 ## First Java Program
 [Hello.java](../../hongkai/src/com/huaxia/hongkai/Hello.java)
@@ -76,6 +84,7 @@ This is multiple line
 comment.
 */
 ```
+
 ## Print
 * [System.out.print](../../hongkai/src/com/huaxia/hongkai/Print.java)
 * System.out.println(String);
