@@ -1,5 +1,4 @@
 <h1> Java learning Notes </h1>
-[Markdown Shared](myIcons.md)
 
 - [Java API Documentation](#java-api-documentation)
 - [Variable naming](#variable-naming)
@@ -8,8 +7,7 @@
 - [Basic skills](#basic-skills)
 - [Comments](#comments)
 - [Print](#print)
-- [Premitive Data Type](#premitive-data-type)
-- [Array](#array)
+- [Data Type](#data-type)
 - [Operators](#operators)
 - [If-else](#if-else)
 - [Loop](#loop)
@@ -34,11 +32,10 @@ int 1a = 0; // 1a is invailid variable name, cause Syntax error
 
 ## Variable and Memory
 ![](images/chineseMedicine.jpg)
-
-The computer memory is something similar as Chinese medicine drawer. You can put something into the drawer, and then you can get what you put in. The only difference is, once you put stuff in computer memory, you can get as many as you want; but the medicien drawer will be empty one you take out too much. 
-
+The computer memory is something similar as Chinese medicine drawer. You can put something into the drawer, and then you can get what you put in. The only difference is, once you put stuff in computer memory, you can get as many as you want; but the medicien drawer will be empty one you take out too much.
 ![](images/memory.gif)
-create a variable just like put a label on the drawer. so you can put more than one labels on the same drawer, or no label at all.
+create a variable just like put a label on the drawer. so you can put more than on labels on the same drawer, or no label at all.
+
 
 ## First Java Program
 [Hello.java](../src/com/huaxia/java1/Hello.java)
@@ -51,7 +48,7 @@ class Hello {
 
 }
 ```
-✔️❌❓
+
 ## Basic skills
 * ❓What is the method signature?
 >✔️1. method name; 2. argument type and number of arguments; 3. maybe return type
@@ -95,7 +92,7 @@ comment.
 
 ![](images/languageBasics.svg)
 
-## Premitive Data Type
+## Data Type
 [Data Type](../src/com/huaxia/java1/DataType.java)
 ```java
 	boolean flag = false; // true, false
@@ -107,12 +104,6 @@ comment.
 	float x = 129.3F; // f or F on the end
 	double y = 12.3;
 ```
-The above data is in the order of the container size.
-
-You can assign small value to bigger container, but cannot assign big value to smaller container. If you know what you are doing, you can cast big value to smaller container, which may truncat your data.
-
-## Array
-Array is a special data type.
 
 ## Operators
 * [Operator](../src/com/huaxia/java1/Operator.java)
@@ -124,7 +115,8 @@ Array is a special data type.
 * Ternary Operator a>b?a:b
 
 ## If-else
-* [if, if-else, if-else if-else](../src/com/huaxia/java1/IfElse.java)
+* [if-else if-else](../src/com/huaxia/java1/IfElse.java)
 
 ## Loop
-* [for/while loop](../src/com/huaxia/java1/Loop.java)
+* [for loop](../src/com/huaxia/java1/Loop.java)
+* [while loop]()
