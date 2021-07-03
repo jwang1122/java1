@@ -8,16 +8,21 @@ public class Math11
 	public static void main(String[] args) 
 	{
 		Scanner input = new Scanner(System.in);
-		System.out.println("Please enter a temperature (45C, 101F): ");
-		String temperature = input.nextLine();
-		if(temperature.contains("F")) 
+		System.out.println("Celsius or Fahrenheit(C, F): ");
+		String tempUnit = input.nextLine();
+		System.out.println("Please enter a temperature(45, 101): ");
+		int temperature = input.nextInt();
+		if(tempUnit.equals("F"))
 		{
-			System.out.println("The temperature in Fahrenheit " + temperature + " is " + " in Celsius.");
+			double conversionF = (temperature - 32) * 5.0/9.0;
+			System.out.printf("The temperature in Fahrenheit %d°F is %.0f°C in Celsius.", temperature, conversionF);
 		}
-		else if(temperature.contains("C")) 
+		else if(tempUnit.equals("C"))
 		{
-			System.out.println("The temperature in Celsius " + temperature + " is " + " in Fahrenheit.");
+			double conversionC = 9.0/5.0 * temperature + 32;
+			System.out.printf("The temperature in Celsius %d°C is %.0f°F in Fahrenheit.", temperature, conversionC);
 		}
+		input.close();
 	}
 
 }
