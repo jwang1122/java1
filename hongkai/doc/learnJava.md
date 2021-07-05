@@ -7,9 +7,11 @@
 - [Basic skills](#basic-skills)
 - [Comments](#comments)
 - [Print](#print)
-- [Data Type](#data-type)
+- [Primitive Data Type](#primitive-data-type)
+- [Array](#array)
+- [ArrayList](#arraylist)
 - [Operators](#operators)
-- [If-else](#if-else)
+- [If-else (execution control)](#if-else-execution-control)
 - [Loop](#loop)
   
 
@@ -93,7 +95,7 @@ comment.
 
 ![](./images/languageBasics.png)
 
-## Data Type
+## Primitive Data Type
 [Data Type](../../hongkai/src/com/huaxia/hongkai/DataType.java)
 ```java
 	boolean flag = false; // true, false
@@ -105,6 +107,15 @@ comment.
 	float x = 129.3F; // f or F on the end
 	double y = 12.3;
 ```
+## Array
+something here
+
+## ArrayList
+ArrayList is JDK build in class, which is resizable-array implementation of the List interface.
+
+the element inside the ArrayList is ordered, which means each element on specific index.
+
+CRUD on ArrayList
 
 ## Operators
 * [Operator](../../hongkai/src/com/huaxia/hongkai/Operators.java)
@@ -115,9 +126,9 @@ comment.
 * Logical Operator  && and, || or, ! not
 * Ternary Operator a>b?a:b
 
-## If-else
+## If-else (execution control)
 * [if-else if-else](../../hongkai/src/com/huaxia/hongkai/IfElse.java)
-
+* [Switch](../src/com/huaxia/hongkai/Switch.java)
+* 
 ## Loop
-* [for loop](../../hongkai/src/com/huaxia/hongkai/Loop.java)
-* [while loop]()
+* [for/while loop](../../hongkai/src/com/huaxia/hongkai/Loop.java)
