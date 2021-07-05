@@ -1,5 +1,3 @@
-// this isn't working as intended. Still under construction... Just skip to LoopHW07.java
-
 package com.huaxia.hongkai.loopHW;
 
 import java.util.Scanner;
@@ -9,15 +7,11 @@ public class LoopHW06 {
 	public static void main(String[] args) {
 		Scanner inputFromConsole = new Scanner(System.in);
 		System.out.print("Input a number: ");
-//		String data = inputFromConsole.nextLine();
-//		int x = 1;
-//		x = data*2;
+		int a = inputFromConsole.nextInt();
 		inputFromConsole.close();
 
-		// use that to do that
-		// utilize some feature I forgot
-		for (int i = 1; i <= 9; ++i) {
-			String str = String.format("%d x %d = %d", i, i, i * i); // fix
+		for (int b = 1; b <= 9; ++b) {
+			String str = String.format("%d x %d = %d", a<b?a:b, a>b?a:b, a*b); // fix
 			System.out.println(str);
 		}
 
