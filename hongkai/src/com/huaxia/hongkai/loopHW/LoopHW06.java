@@ -3,23 +3,21 @@
 package com.huaxia.hongkai.loopHW;
 
 import java.util.Scanner;
-/**
- * Write a Python program to create the multiplication table (from 1 to 9) of a number.
- * Ask user input a number.
- * 
- * @author Hongkai Z
- *
- */
+
 public class LoopHW06 {
 
 	public static void main(String[] args) {
 		Scanner inputFromConsole = new Scanner(System.in);
 		System.out.print("Input a number: ");
-		int data = inputFromConsole.nextInt();
+//		String data = inputFromConsole.nextLine();
+//		int x = 1;
+//		x = data*2;
 		inputFromConsole.close();
 
+		// use that to do that
+		// utilize some feature I forgot
 		for (int i = 1; i <= 9; ++i) {
-			String str = String.format("%d x %d = %d", data, i, data * i); // fix
+			String str = String.format("%d x %d = %d", i, i, i * i); // fix
 			System.out.println(str);
 		}
 

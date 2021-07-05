@@ -1,22 +1,15 @@
 package com.huaxia.laura.homeworks;
 
-import java.util.Scanner;
-
 public class LoopHW11 {
 
 	public static void main(String[] args) 
 	{
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the length of the list:");
-		int length = input.nextInt();
-		int[] list = new int [length];
-		System.out.println("Enter the list of numbers(number number number number...)");
-		for(int i = 0; i <= length; i++) 
+		int[] array = {12, 15, 32, 42, 55, 75, 122, 132, 150, 180, 200};
+		for(int i = 0; i < array.length; i++) 
 		{
-			list[i] = input.nextInt();
-			if(list[i]%5 == 0) 
+			if(array[i]%5 == 0) 
 			{
-				System.out.print(list[i] + " ");
+				System.out.print(array[i] + " ");
 			}
 		}
 	}

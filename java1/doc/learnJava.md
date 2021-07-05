@@ -1,12 +1,15 @@
 <h1> Java learning Notes </h1>
+[Markdown Shared](myIcons.md)
 
 - [Java API Documentation](#java-api-documentation)
 - [Variable naming](#variable-naming)
+- [Variable and Memory](#variable-and-memory)
 - [First Java Program](#first-java-program)
 - [Basic skills](#basic-skills)
 - [Comments](#comments)
 - [Print](#print)
-- [Data Type](#data-type)
+- [Premitive Data Type](#premitive-data-type)
+- [Array](#array)
 - [Operators](#operators)
 - [If-else](#if-else)
 - [Loop](#loop)
@@ -29,6 +32,14 @@ int 1a = 0; // 1a is invailid variable name, cause Syntax error
 
 [Java Reserve Keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html)
 
+## Variable and Memory
+![](images/chineseMedicine.jpg)
+
+The computer memory is something similar as Chinese medicine drawer. You can put something into the drawer, and then you can get what you put in. The only difference is, once you put stuff in computer memory, you can get as many as you want; but the medicien drawer will be empty one you take out too much. 
+
+![](images/memory.gif)
+create a variable just like put a label on the drawer. so you can put more than one labels on the same drawer, or no label at all.
+
 ## First Java Program
 [Hello.java](../src/com/huaxia/java1/Hello.java)
 ```java
@@ -40,7 +51,7 @@ class Hello {
 
 }
 ```
-
+✔️❌❓
 ## Basic skills
 * ❓What is the method signature?
 >✔️1. method name; 2. argument type and number of arguments; 3. maybe return type
@@ -84,7 +95,7 @@ comment.
 
 ![](images/languageBasics.svg)
 
-## Data Type
+## Premitive Data Type
 [Data Type](../src/com/huaxia/java1/DataType.java)
 ```java
 	boolean flag = false; // true, false
@@ -98,7 +109,10 @@ comment.
 ```
 The above data is in the order of the container size.
 
-You can assign small value to bigger container, but cannot assign big value to smaller container. If you know what you are doing, you can cast big value to smaller container, which may truncation your data.
+You can assign small value to bigger container, but cannot assign big value to smaller container. If you know what you are doing, you can cast big value to smaller container, which may truncat your data.
+
+## Array
+Array is a special data type.
 
 ## Operators
 * [Operator](../src/com/huaxia/java1/Operator.java)
@@ -113,5 +127,4 @@ You can assign small value to bigger container, but cannot assign big value to s
 * [if, if-else, if-else if-else](../src/com/huaxia/java1/IfElse.java)
 
 ## Loop
-* [for loop](../src/com/huaxia/java1/Loop.java)
-* [while loop]()
+* [for/while loop](../src/com/huaxia/java1/Loop.java)

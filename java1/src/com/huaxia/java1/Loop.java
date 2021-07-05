@@ -1,6 +1,9 @@
 package com.huaxia.java1;
+<<<<<<< HEAD
+=======
 
 import java.util.Scanner;
+>>>>>>> branch '9.00' of https://github.com/jwang1122/java1
 
 public class Loop {
 
@@ -32,17 +35,17 @@ public class Loop {
 		System.out.println();
 		
 		// infinite while loop with conditional break 
-//		Scanner input = new Scanner(System.in); // new Scanner() create a new instance of Scanner class as a factory
-//		i = 0;
-//		while(true) { // infinite loop
-//			System.out.print(++i + ": Do you want to continue? (y/n) ");
-//			String answer = input.nextLine();
-//			if( answer.equals("n")) {
-//				break;
-//			}
-//		}
-//		input.close();
-//		System.out.println("Bye...");
+		Scanner input = new Scanner(System.in); // new Scanner() create a new instance of Scanner class as a factory
+		i = 0;
+		while(true) { // infinite loop
+			System.out.print(++i + ": Do you want to continue? (y/n) ");
+			String answer = input.nextLine();
+			if( answer.equals("n")) {
+				break;
+			}
+		}
+		input.close();
+		System.out.println("Bye...");
 		
 		// while loop with continue
 		i = 0;
@@ -50,6 +53,7 @@ public class Loop {
 		while(i < 10) {
 			if (i>= 4 && i<7) {
 				sum += i;
+				System.out.println(i);
 				i++;
 				continue;
 			}
