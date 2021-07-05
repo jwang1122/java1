@@ -108,7 +108,8 @@ comment.
 	double y = 12.3;
 ```
 ## Array
-something here
+Array is a special data type, which contains a list of elements of all kinds of data types. (int[], String[], Hello[])
+* [Array.java](../src/com/huaxia/hongkai/Array.java)
 
 ## ArrayList
 ArrayList is JDK build in class, which is resizable-array implementation of the List interface.
@@ -116,6 +117,7 @@ ArrayList is JDK build in class, which is resizable-array implementation of the 
 the element inside the ArrayList is ordered, which means each element on specific index.
 
 CRUD on ArrayList
+* [](../src/com/huaxia/hongkai/MyArrayList.java)
 
 ## Operators
 * [Operator](../../hongkai/src/com/huaxia/hongkai/Operators.java)

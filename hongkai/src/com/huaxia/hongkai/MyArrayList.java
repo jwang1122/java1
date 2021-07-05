@@ -38,7 +38,7 @@ public class MyArrayList {
 
 		// remove value
 		printArrayList(al);
-		al.remove(new Integer(3)); // remove value need pass an Object, NOT int
+//		al.remove(new Integer(3)); // remove value need pass an Object, NOT int
 		printArrayList(al);
 
 	}

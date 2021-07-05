@@ -9,18 +9,29 @@ public class Switch {
 		System.out.println(getNumber("three"));
 
 	}
+	static String getName(String h) {
+		String name = "";
+		switch(h) { // Java switch only support byte, char, short, int, String, enum
+		
+		}
+		return name;
+	}
 	
 	static int getNumber(String num) {
-//		int result = 0;
+		int result = 0;
 		switch(num) {
 		case "one":
-			return 1;
+			result = 1;
+			break;
 		case "two":
-			return 2;
+			result = 2;
+			break;
 		case "three":
-			return 3;
+			result = 3;
+			break;
 		case "four":
-			return 4;
+			result = 4;
+			break;
 		case "five":
 			return 5;
 		case "six":
@@ -30,7 +41,7 @@ public class Switch {
 		default:
 			return 0;
 		}
-//		return result;
+		return result;
 	}
 	static String getDay(int day) {
 		switch(day) {
