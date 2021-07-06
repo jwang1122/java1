@@ -35,5 +35,29 @@ public class Array {
 		}
 		System.out.println();	
 		
+		// Change element inside an array
+		System.out.println(helloes[1]); // print out individual element of array at index 1
+		Hello hello1 = helloes[1];
+
+		System.out.println("array element ID: "+helloes[1].hashCode());
+		System.out.println("Hello instance ID: "+hello1.hashCode());
+		
+		hello1.name = "Sarah";
+		System.out.println(hello1);
+		System.out.println(helloes[1]); // print out individual element of array at index 1
+		
+		// change value in the array type on index=3
+		type[3] = "Metal";
+		for (String cupType: type) {
+			System.out.print(cupType + ", ");
+		}
+		System.out.println();
+		
+		a[2] = 23;
+		for (int x : a) { // for-each: run through every element
+			System.out.print(x + " ");
+		}
+		System.out.println();
+		
 	}
 }
