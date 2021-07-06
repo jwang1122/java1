@@ -1,8 +1,5 @@
 <h1> Java learning Notes </h1>
-[](../doc/myIcons.md)
 
-## Table of contents
-- [Table of contents](#table-of-contents)
 - [Java API Documentation](#java-api-documentation)
 - [Variable naming](#variable-naming)
 - [Variable and Memory](#variable-and-memory)
@@ -10,13 +7,10 @@
 - [Basic skills](#basic-skills)
 - [Comments](#comments)
 - [Print](#print)
-- [Primitive Data Type](#primitive-data-type)
-- [Array](#array)
-- [ArrayList](#arraylist)
+- [Data Type](#data-type)
 - [Operators](#operators)
-- [If-else (execution control)](#if-else-execution-control)
+- [If-else](#if-else)
 - [Loop](#loop)
-- [Method (Function)](#method-function)
   
 
 
@@ -38,13 +32,13 @@ int 1a = 0; // 1a is invailid variable name, cause Syntax error
 
 ## Variable and Memory
 ![](images/chineseMedicine.jpg)
-The computer memory is something similar as Chinese medicine drawer. You can put something in the drawer. and then you can get what yuo put in, the only difference is, once you put stuff in the computer memory, you can get as many as you want; but the medicine drawer will be empty once you take out too much.
-
+The computer memory is something similar as Chinese medicine drawer. You can put something into the drawer, and then you can get what you put in. The only difference is, once you put stuff in computer memory, you can get as many as you want; but the medicien drawer will be empty one you take out too much.
 ![](images/memory.gif)
-create a variable just like put a label on the drawer, so you can put more than one labels on the same drawer, or no label at all
+create a variable just like put a label on the drawer. so you can put more than on labels on the same drawer, or no label at all.
+
 
 ## First Java Program
-[Hello.java](../../hongkai/src/com/huaxia/hongkai/Hello.java)
+[Hello.java](../src/com/huaxia/java1/Hello.java)
 ```java
 class Hello {
 	// my main method to run this class
@@ -90,17 +84,16 @@ This is multiple line
 comment.
 */
 ```
-
 ## Print
-* [System.out.print](../../hongkai/src/com/huaxia/hongkai/Print.java)
+* [System.out.print](../src/com/huaxia/java1/Print.java)
 * System.out.println(String);
 * System.out.print(String);
 * System.out.printf(format, args);
 
-![](./images/languageBasics.png)
+![](images/languageBasics.svg)
 
-## Primitive Data Type
-[Data Type](../../hongkai/src/com/huaxia/hongkai/DataType.java)
+## Data Type
+[Data Type](../src/com/huaxia/java1/DataType.java)
 ```java
 	boolean flag = false; // true, false
 	byte myByte = 127; // 8 bits, -128~127
@@ -111,20 +104,9 @@ comment.
 	float x = 129.3F; // f or F on the end
 	double y = 12.3;
 ```
-## Array
-Array is a special data type, which contains a list of elements of all kinds of data types. (int[], String[], Hello[])
-* [Array.java](../src/com/huaxia/hongkai/Array.java)
-
-## ArrayList
-ArrayList is JDK build in class, which is resizable-array implementation of the List interface.
-
-the element inside the ArrayList is ordered, which means each element on specific index.
-
-CRUD on ArrayList
-* [](../src/com/huaxia/hongkai/MyArrayList.java)
 
 ## Operators
-* [Operator](../../hongkai/src/com/huaxia/hongkai/Operators.java)
+* [Operator](../src/com/huaxia/java1/Operator.java)
 * Arithmetic operator +, -, *, /, %
 * Compound assignment operator +=, -=, *=, /=, %=
 * Binary operator ++, --
@@ -132,20 +114,9 @@ CRUD on ArrayList
 * Logical Operator  && and, || or, ! not
 * Ternary Operator a>b?a:b
 
-## If-else (execution control)
-* [if-else if-else](../../hongkai/src/com/huaxia/hongkai/IfElse.java)
-* [Switch](../src/com/huaxia/hongkai/Switch.java)
-* 
+## If-else
+* [if-else if-else](../src/com/huaxia/java1/IfElse.java)
+
 ## Loop
-* [for/while loop](../../hongkai/src/com/huaxia/hongkai/Loop.java)
-
----
-[Table of contents](#table-of-contents)
-
-## Method (Function)
-* method has signature(fingerprint)
-* method overloading
-* ❓What is a static way of calling a method
-* ✔️Use class name to call static method
-[Method in java](../src/com/huaxia/hongkai/Method.java)
-[Use the class within the same package](../src/com/huaxia/hongkai/TestMethod.java)
+* [for loop](../src/com/huaxia/java1/Loop.java)
+* [while loop]()

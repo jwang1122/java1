@@ -4,13 +4,10 @@ import java.util.Scanner;
 
 /**
  * 1. Write a program calculate Euler's constant.
-
 Expected execution output:
 Enter any positive integer: 10
 The Euler's constant is 2.7182815255731922.
-
 [Euler's Constant](https://www.mathsisfun.com/numbers/e-eulers-number.html)
-
  * @author Hongkai Z
  *
  */
@@ -32,4 +29,4 @@ public class LoopHW08 {
 }
 
 
-//I spent an hour on this :)
+//I spent an hour on this :) 

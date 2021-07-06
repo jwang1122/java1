@@ -1,46 +1,41 @@
-package com.huaxia.java1;
-<<<<<<< HEAD
-=======
+package com.huaxia.sarah;
 
 import java.util.Scanner;
->>>>>>> branch '9.00' of https://github.com/jwang1122/java1
 
 public class Loop {
 
 	public static void main(String[] args) {
-		// for loop syntax, i is defined within for loop scope
-		for (int i=2; i<=10; i++) {
+		// for loop syntax
+		for (int i = 2; i<=10; i+=2) {
 			System.out.print(i + ", ");
 		}
 		System.out.println();
-		
-		// for loop with neigative step
+		// for loop with negative step
 		int i = 10;
-		for (;i>0; i--) { // initialize looping variable; condition on looping variable; adjust looping variable
+		for (; i>0; i--) { //initialize looping variable; condition on looping variable; command 
 			System.out.print(i + ", ");
-//			if(i==10) break;
+//			if (i==10) break;
 		}
 		System.out.println("\nAfter the for loop, i = "+i);
 		
-		String[] cars = {"Volvo","BMW","Ford","Mazda"};
+		String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 		for(String car: cars) { // for each loop
 			System.out.println(car);
 		}
 		
-		// while loop
+		//while loop
 		i = 1;
 		while(i<=10) {
 			System.out.print(i++ + ", ");
 		}
 		System.out.println();
 		
-		// infinite while loop with conditional break 
-		Scanner input = new Scanner(System.in); // new Scanner() create a new instance of Scanner class as a factory
+		Scanner input = new Scanner(System.in); // new Scanner() create a new instance of Scanner class as a factor
 		i = 0;
 		while(true) { // infinite loop
 			System.out.print(++i + ": Do you want to continue? (y/n) ");
 			String answer = input.nextLine();
-			if( answer.equals("n")) {
+			if(answer.equals("n")) {
 				break;
 			}
 		}
@@ -51,11 +46,10 @@ public class Loop {
 		i = 0;
 		int sum = 0;
 		while(i < 10) {
-			if (i>= 4 && i<7) {
+			if(i >= 4 && i<7) {
+//				i++;
 				sum += i;
-				System.out.println(i);
-				i++;
-				continue;
+//				continue;
 			}
 			System.out.println(i);
 			i++;
