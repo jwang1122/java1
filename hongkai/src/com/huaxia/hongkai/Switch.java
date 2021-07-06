@@ -6,7 +6,7 @@ public class Switch {
 	public static void main(String[] args) {
 		int day = 4;
 		System.out.println(getDay(day));
-		System.out.println(getNumber("three"));
+		System.out.println(getNumber("four"));
 
 	}
 	static String getName(String h) {

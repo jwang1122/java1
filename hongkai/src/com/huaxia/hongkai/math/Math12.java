@@ -23,9 +23,6 @@ Find GCD(B,R) using the Euclidean Algorithm since GCD(A,B) = GCD(B,R)
 public class Math12 {
 
 	public static void main(String[] args) {
-		//show-off part
-		
-		// scanner inputting
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter number 1: ");
 		int a = input.nextInt();
@@ -34,14 +31,11 @@ public class Math12 {
 		input.close();
 		int output = euclidAlgorithm(a, b);
 		
-		// print part!!
 		String str1 = String.format("Enter two integer numbers: %d %d\n", a,b);
 		String str2 = String.format("The GCD for %d and %d is %d.", a,b,output);
 		System.out.println(str1+str2);
 	}
-	//math part
 	static int euclidAlgorithm(int num1, int num2) {
-		// small big number sorting(using ternary operators)
 		int a = num1 > num2 ? num1 : num2;
 		int b = num1 < num2 ? num1 : num2;
 		
@@ -50,8 +44,7 @@ public class Math12 {
 		} else if (b == 0) {
 			return a;
 		} else {
-			int r = a%b; // r is remainder
-			//boring recursion time
+			int r = a%b;
 			return euclidAlgorithm(b,r);
 		}
 

@@ -1,5 +1,8 @@
 <h1> Java learning Notes </h1>
+[](../doc/myIcons.md)
 
+## Table of contents
+- [Table of contents](#table-of-contents)
 - [Java API Documentation](#java-api-documentation)
 - [Variable naming](#variable-naming)
 - [Variable and Memory](#variable-and-memory)
@@ -13,6 +16,7 @@
 - [Operators](#operators)
 - [If-else (execution control)](#if-else-execution-control)
 - [Loop](#loop)
+- [Method (Function)](#method-function)
   
 
 
@@ -134,3 +138,14 @@ CRUD on ArrayList
 * 
 ## Loop
 * [for/while loop](../../hongkai/src/com/huaxia/hongkai/Loop.java)
+
+---
+[Table of contents](#table-of-contents)
+
+## Method (Function)
+* method has signature(fingerprint)
+* method overloading
+* ❓What is a static way of calling a method
+* ✔️Use class name to call static method
+[Method in java](../src/com/huaxia/hongkai/Method.java)
+[Use the class within the same package](../src/com/huaxia/hongkai/TestMethod.java)
