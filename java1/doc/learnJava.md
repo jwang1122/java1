@@ -18,6 +18,8 @@
 - [Loop](#loop)
 - [Method (Function)](#method-function)
 - [OOP](#oop)
+- [Simple Math](#simple-math)
+- [Exception](#exception)
   
 
 
@@ -183,3 +185,9 @@ CRUD (Create, Retrieve, Update, Delete) on ArrayList, ArrayList is mutable.
 * Encapsulation: private, protected
 * Abstraction: abstract object in the real world to write a class.
   ![](images/ClassAbstraction.png)
+
+
+## Simple Math
+
+## Exception
+
