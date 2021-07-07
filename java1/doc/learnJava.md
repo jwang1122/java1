@@ -17,6 +17,7 @@
 - [If-else (execution control)](#if-else-execution-control)
 - [Loop](#loop)
 - [Method (Function)](#method-function)
+- [OOP](#oop)
   
 
 
@@ -171,5 +172,14 @@ CRUD (Create, Retrieve, Update, Delete) on ArrayList, ArrayList is mutable.
 * method overloading
 * ❓What is a static way of calling a method?
 * ✔️Use class name to call static method.
-[Method in Java](../src/com/huaxia/java1/Method.java)
-[Use the class within same package](../src/com/huaxia/java1/TestMethod.java)
+* [Method in Java](../src/com/huaxia/java1/Method.java)
+* [Use the class within same package](../src/com/huaxia/java1/TestMethod.java)
+>private method can only be called inside the class, and default method can be called within the same package, and public method can be called anywhere.
+* [Test code on different package](../src/com/huaxia/test/TestMethod.java)
+
+## OOP
+* Object Oriented Programming concept
+  ![](images/oop.png)
+* Encapsulation: private, protected
+* Abstraction: abstract object in the real world to write a class.
+  ![](images/ClassAbstraction.png)

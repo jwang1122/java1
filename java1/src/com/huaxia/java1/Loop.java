@@ -1,9 +1,6 @@
 package com.huaxia.java1;
-<<<<<<< HEAD
-=======
 
 import java.util.Scanner;
->>>>>>> branch '9.00' of https://github.com/jwang1122/java1
 
 public class Loop {
 

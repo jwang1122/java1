@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>learnJava.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1> Java learning Notes </h1>
+[Markdown Shared](myIcons.md)
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#java-api-documentation">Java API Documentation</a></li>
+<li><a href="#variable-naming">Variable naming</a></li>
+<li><a href="#variable-and-memory">Variable and Memory</a></li>
+<li><a href="#first-java-program">First Java Program</a></li>
+<li><a href="#basic-skills">Basic skills</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#print">Print</a></li>
+<li><a href="#primitive-data-type">Primitive Data Type</a></li>
+<li><a href="#array">Array</a></li>
+<li><a href="#arraylist">ArrayList</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#if-else-execution-control">If-else (execution control)</a></li>
+<li><a href="#loop">Loop</a></li>
+<li><a href="#method-function">Method (Function)</a></li>
+<li><a href="#oop">OOP</a></li>
+</ul>
+<h2 id="java-api-documentation">Java API Documentation</h2>
+<p><a href="https://docs.oracle.com/javase/8/docs/api/">Java API website</a></p>
+<h2 id="variable-naming">Variable naming</h2>
+<ol>
+<li>variable name cannot start with number</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">int</span> <span class="hljs-number">1</span>a = <span class="hljs-number">0</span>; <span class="hljs-comment">// 1a is invailid variable name, cause Syntax error</span>
+</div></code></pre>
+<ol start="2">
+<li>variable can only start with letter combined with letter and number _, a-z, A-Z, 0-9, no other special characters.</li>
+<li>prefer camel style: firstName, it is used for variables, method name.</li>
+<li>cannot use reserved java key words and existing class name for variable name.</li>
+</ol>
+<p><img src="file:///c:/Users/12818/workspace/java1/java1/doc/images/javaKeywords.png" alt=""></p>
+<p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html">Java Reserve Keywords</a></p>
+<h2 id="variable-and-memory">Variable and Memory</h2>
+<p><img src="file:///c:/Users/12818/workspace/java1/java1/doc/images/chineseMedicine.jpg" alt=""></p>
+<p>The computer memory is something similar as Chinese medicine drawer. You can put something into the drawer, and then you can get what you put in. The only difference is, once you put stuff in computer memory, you can get as many as you want; but the medicien drawer will be empty one you take out too much.</p>
+<p><img src="file:///c:/Users/12818/workspace/java1/java1/doc/images/memory.gif" alt="">
+create a variable just like put a label on the drawer. so you can put more than one labels on the same drawer, or no label at all.</p>
+<h2 id="first-java-program">First Java Program</h2>
+<p><a href="../src/com/huaxia/java1/Hello.java">Hello.java</a></p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> </span>{
+	<span class="hljs-comment">// my main method to run this class</span>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] options)</span> </span>{
+		System.out.println(<span class="hljs-string">"Hello, World!"</span>);
+	}
+
+}
+</div></code></pre>
+<p>❓✔️❌</p>
+<h2 id="basic-skills">Basic skills</h2>
+<ul>
+<li>❓What is the method signature?</li>
+</ul>
+<blockquote>
+<p>✔️1. method name; 2. argument type and number of arguments; 3. maybe return type</p>
+</blockquote>
+<ul>
+<li>❓What are the modifiers?</li>
+</ul>
+<blockquote>
+<p>✔️public, private, static, protected</p>
+</blockquote>
+<ul>
+<li>❓Can I rename main method?</li>
+</ul>
+<blockquote>
+<p>✔️No, you cannot!</p>
+</blockquote>
+<ul>
+<li>❓How to create a package?</li>
+</ul>
+<blockquote>
+<p>✔️Right-click <strong>src</strong> folder ⟹ New ⟹ Package ⟹ enter package name</p>
+</blockquote>
+<ul>
+<li>❓How to create Java Class?</li>
+</ul>
+<blockquote>
+<p>✔️Right-click package name ⟹ New ⟹ Class ⟹ enter class name</p>
+</blockquote>
+<ul>
+<li>❓How to run java class?</li>
+</ul>
+<blockquote>
+<p>✔️there are 3 ways to run
+1. Click green run button on toolbar
+2. Click Run menu ⟹ Run As ⟹Java Application
+3. Right-click in Editor window ⟹ Run As ⟹ Java Application</p>
+</blockquote>
+<ul>
+<li>❓How to rename a class file?</li>
+</ul>
+<blockquote>
+<p>✔️Right-Click file name on Explore ⟹ Refactor ⟹ Rename</p>
+</blockquote>
+<ul>
+<li>❓How do I configure the Run environment?</li>
+</ul>
+<blockquote>
+<p>✔️There are more than one to do this
+- Click the dropdown button beside green run button on toolbar ⟹ Run Configurations
+- Run menu ⟹ Run Configurations...
+- Right-click in Editor window ⟹ Run As ⟹ Run Configurations...</p>
+</blockquote>
+<ul>
+<li>❓What is 'Run Configurations'?
+<ol>
+<li>configure the main class (the class has main() method)</li>
+<li>insert runtime arguments</li>
+<li>pick different JRE library</li>
+<li>modify dependencies</li>
+<li>more ...</li>
+</ol>
+</li>
+</ul>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>Single line comment</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">// this is single line comment</span>
+<span class="hljs-keyword">int</span> a = <span class="hljs-comment">/* assign value 10 to a*/</span> <span class="hljs-number">10</span>;
+<span class="hljs-keyword">int</span> b = <span class="hljs-number">5</span>; <span class="hljs-comment">// add comment after code</span>
+</div></code></pre>
+<ul>
+<li>Multiple lines comment</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">/**
+This is multiple line
+comment.
+*/</span>
+</div></code></pre>
+<hr>
+<p><a href="#table-of-contents">Table of Contents</a></p>
+<h2 id="print">Print</h2>
+<ul>
+<li><a href="../src/com/huaxia/java1/Print.java">System.out.print</a></li>
+<li>System.out.println(String);</li>
+<li>System.out.print(String);</li>
+<li>System.out.printf(format, args);</li>
+</ul>
+<p><img src="file:///c:/Users/12818/workspace/java1/java1/doc/images/languageBasics.svg" alt=""></p>
+<h2 id="primitive-data-type">Primitive Data Type</h2>
+<p><a href="../src/com/huaxia/java1/DataType.java">Data Type</a></p>
+<pre class="hljs"><code><div>	<span class="hljs-keyword">boolean</span> flag = <span class="hljs-keyword">false</span>; <span class="hljs-comment">// true, false</span>
+	<span class="hljs-keyword">byte</span> myByte = <span class="hljs-number">127</span>; <span class="hljs-comment">// 8 bits, -128~127</span>
+	<span class="hljs-keyword">char</span> c = <span class="hljs-string">'A'</span>; <span class="hljs-comment">// ASCII:American Standard Code for Information Interchange, 7 bits</span>
+	<span class="hljs-keyword">short</span> myShort = <span class="hljs-number">128</span>;
+	<span class="hljs-keyword">int</span> a = <span class="hljs-number">1234542345</span>; <span class="hljs-comment">// int is data type of integer</span>
+	<span class="hljs-keyword">long</span> l = <span class="hljs-number">123454234563242L</span>; <span class="hljs-comment">// put L, or l, on the end</span>
+	<span class="hljs-keyword">float</span> x = <span class="hljs-number">129.3F</span>; <span class="hljs-comment">// f or F on the end</span>
+	<span class="hljs-keyword">double</span> y = <span class="hljs-number">12.3</span>;
+</div></code></pre>
+<p>The above data is in the order of the container size.</p>
+<p>You can assign small value to bigger container, but cannot assign big value to smaller container. If you know what you are doing, you can cast big value to smaller container, which may truncat your data.</p>
+<h2 id="array">Array</h2>
+<p>Array is a special data type, which contains a list of element of all kinds data type. (int[], String[], Hello[])
+<a href="../src/com/huaxia/java1/Array.java">Array.java</a></p>
+<h2 id="arraylist">ArrayList</h2>
+<p>ArrayList is JDK build in class, which is resizable-array implementation of the List interface.</p>
+<p>the element inside the ArrayList is ordered, which means each element on specific index.</p>
+<p>CRUD (Create, Retrieve, Update, Delete) on ArrayList, ArrayList is mutable.</p>
+<p><a href="../src/com/huaxia/java1/MyArrayList.java">MyArrayList.java</a></p>
+<h2 id="operators">Operators</h2>
+<ul>
+<li><a href="../src/com/huaxia/java1/Operator.java">Operator</a></li>
+<li>Arithmetic operator +, -, *, /, %</li>
+<li>Compound assignment operator +=, -=, *=, /=, %=</li>
+<li>Binary operator ++, --</li>
+<li>Comparison Operator &gt;, &lt;, &gt;=, &lt;=, ==, !=</li>
+<li>Logical Operator  &amp;&amp; and, || or, ! not</li>
+<li>Ternary Operator a&gt;b?a:b</li>
+</ul>
+<h2 id="if-else-execution-control">If-else (execution control)</h2>
+<ul>
+<li><a href="../src/com/huaxia/java1/IfElse.java">if, if-else, if-else if-else</a></li>
+<li><a href="../src/com/huaxia/java1/Switch.java">Switch</a></li>
+</ul>
+<h2 id="loop">Loop</h2>
+<ul>
+<li><a href="../src/com/huaxia/java1/Loop.java">for/while loop</a></li>
+</ul>
+<hr>
+<p><a href="#table-of-contents">Table of Contents</a></p>
+<h2 id="method-function">Method (Function)</h2>
+<ul>
+<li>method has signature (finger print)</li>
+<li>method overloading</li>
+<li>❓What is a static way of calling a method?</li>
+<li>✔️Use class name to call static method.</li>
+<li><a href="../src/com/huaxia/java1/Method.java">Method in Java</a></li>
+<li><a href="../src/com/huaxia/java1/TestMethod.java">Use the class within same package</a></li>
+</ul>
+<blockquote>
+<p>private method can only be called inside the class, and default method can be called within the same package, and public method can be called anywhere.</p>
+</blockquote>
+<ul>
+<li><a href="../src/com/huaxia/test/TestMethod.java">Test code on different package</a></li>
+</ul>
+<h2 id="oop">OOP</h2>
+<ul>
+<li>Object Oriented Programming concept
+<img src="file:///c:/Users/12818/workspace/java1/java1/doc/images/oop.png" alt=""></li>
+<li>Encapsulation: private, protected</li>
+<li>Abstraction: abstract object in the real world to write a class.
+<img src="file:///c:/Users/12818/workspace/java1/java1/doc/images/ClassAbstraction.png" alt=""></li>
+</ul>
+
+</body>
+</html>

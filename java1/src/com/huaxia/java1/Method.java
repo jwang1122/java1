@@ -6,18 +6,28 @@ package com.huaxia.java1;
  * 2. number of arguments
  * 3. type of arguments
  * 
+ * the method in a class is defined what the object of the class can do.
+ * 
  * Method overloading: same method name with different method signature
+ * 
+ * private scope is called encapsulation: avoid calling from outside unexpectedly.
  * 
  * @author John
  *
  */
 public class Method {
 
-	static int add(int x, int y) { // create a static method so I can call it directly in main()
+	// this is a default scope method which can only be used within same package 
+//	static int add(int x, int y) { // create a static method so I can call it directly in main()
+//		return x + y;
+//	}
+	
+	// public modifier determine the scope of this method add()
+	public static int add(int x, int y) { // create a static method so I can call it directly in main()
 		return x + y;
 	}
 	
-	double add(double x, double y) {// different signature of add() method, so-called method overloading
+	public double add(double x, double y) {// different signature of add() method, so-called method overloading
 		return x + y;
 	}
 	
