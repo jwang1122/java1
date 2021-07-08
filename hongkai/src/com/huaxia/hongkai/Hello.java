@@ -13,7 +13,7 @@ package com.huaxia.hongkai;
  * 3. methods
  * 4. representative (toString() method)
  */
-class Hello { // first letter of class is UPPERCASE
+class Hello implements Comparable{ // first letter of class is UPPERCASE
 	String name = "";
 	int age; // by default, the age = 0
 
@@ -27,6 +27,11 @@ class Hello { // first letter of class is UPPERCASE
 		this.age = age;
 	}
 	
+	public boolean equals(Object obj) {
+		Hello h = (Hello)obj;
+		return this.name.equals(h.name);
+	}
+	
 	void sayHello() {
 		System.out.println("Hello, " + this.name);
 	}
@@ -35,13 +40,15 @@ class Hello { // first letter of class is UPPERCASE
 		return "[name]=" + name + ", [age]=" + age;
 	}
 
-	// main method to run this class
+	// my main method to run this class, main is static can be run by class name
+	// which hello
 	public static void main(String[] options) {
 		System.out.println("Hello, World!");
 //		for(int i=0; i<options.length;i++) {
 //			System.out.println(options[i]);
 //		}
 //		String hello = "Individual";
+//		System.out.println(hello);
 //		for(int i=0; i<hello.length(); i++) {
 //			System.out.println(hello.charAt(i));
 //		}
@@ -52,10 +59,38 @@ class Hello { // first letter of class is UPPERCASE
 		String s1 = "Johnny";
 		String s2 = "Johnny";
 		System.out.println(s1 + " " + s2);
+		System.out.println(s1==s2);
 		
 		s1 = new String("Johnny");
 		s2 = new String("Johnny");
 		System.out.println(s1==s2);
 		System.out.println(s1.equals(s2));
 	}
+	
+	/**
+	 * sort by name
+	 */
+	@Override
+	public int compareTo(Object o) {
+		Hello h = (Hello)o;
+		return name.compareTo(h.name);
+	}
+	
+	
+	/**
+	 * sort by age
+	 */
+//	@Override
+//	public int compareTo(Object o) {
+//		Hello h = (Hello)o;
+//		if (age<h.age) {
+//			return -1;
+//		}
+//		if (age>h.age) {
+//			return 1;
+//		}
+//		return 0;
+//	}
+	
+	
 }
