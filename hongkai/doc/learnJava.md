@@ -16,8 +16,14 @@
 - [Operators](#operators)
 - [If-else (execution control)](#if-else-execution-control)
 - [Loop](#loop)
+	- [For loop](#for-loop)
+	- [While loop](#while-loop)
 - [Method (Function)](#method-function)
+- [Simple Math](#simple-math)
+- [Exception](#exception)
+- [File Access](#file-access)
 - [OOP](#oop)
+- [class](#class)
   
 
 
@@ -134,10 +140,58 @@ CRUD on ArrayList
 * Ternary Operator a>b?a:b
 
 ## If-else (execution control)
+
+From Instructor to Everyone:  09:23 AM
+```mermaid
+graph TB
+A((start))
+B{if <condition>:}
+C[if code block]
+D[else code block]
+E[end]
+
+
+A-->B
+B--True-->C-->E
+B--False-->D-->E
+
+A1((start))
+B1{if <condition>:}
+B2{else if <condition>:}
+C1[if code block<br>line-22]
+D1[else if code block<br>line-24]
+E1[end]
+F1[else code block<br>line-26]
+
+A1-->B1
+B1--True-->C1-->E1
+B1--False-->B2--True-->D1-->E1
+B2--False-->F1-->E1
+
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+classDef js fill:yellow,stroke:#DE9E1F,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px;
+class A,A1 start
+class B,B1,B2 html
+class E,E1 end1
+```
+
 * [if-else if-else](../../hongkai/src/com/huaxia/hongkai/IfElse.java)
 * [Switch](../src/com/huaxia/hongkai/Switch.java)
-* 
+
 ## Loop
+### For loop
+
+![](images/Loop.svg)
+
+### While loop
+
+![](images/while.svg)
+
+![](images/DoWhile.svg)
+
 * [for/while loop](../../hongkai/src/com/huaxia/hongkai/Loop.java)
 
 ---
@@ -153,9 +207,53 @@ CRUD on ArrayList
 >privatr method can only be called inside the class, and default method can be called within the same package, and public method can be called anywhere.
 * [Test code on different package](../src/com/huaxia/test/TestMethod.java)
 
+## Simple Math
+
+## Exception
+
+## File Access
+
 ## OOP
 * Object Oriented Programming concept
   ![](images/oop.png)
-* Encapsulation: private, protected
-* Abstraction: abstract object in the real world to write a class
-  ![](images/ClassAbstraction.png)
+1. Encapsulation: 
+>private modifier make variable or method in the class can only be used within the class, which makes encapsulation possible.
+2. Abstraction: abstract object in the real world to write a class
+	![](images/ClassAbstraction.png)
+
+[First Class](../src/com/huaxia/hongkai/Air.java)
+```mermaid
+classDiagram
+class Air{
+	-isPoison:boolean
+	type:String
+	smogSize:double
+	OxygenPercentage:double
+	NitrogenPercentage:double
+	Air(boolean, String, double)
+	+blow()
+	+pumpFlatTire()
+}
+```
+3. Inheritance: sub class inherit features from super class
+```mermaid
+classDiagram
+class Person{
+	- firstName:String
+	- lastName:String
+	- SSN:String
+	- age:int
+	- gender:int
+	+ getFirstName()
+	+ setFirstName(String firstName)
+	+ getAge()
+	+ setAge(int age)
+}
+
+class Student{
+	- =studentID:String
+	- grad:int
+	+turnInHomeworks
+}
+```
+## class
