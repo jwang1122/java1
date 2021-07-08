@@ -1,6 +1,6 @@
 package com.huaxia.hongkai;
 
-public class person {
+public class Person {
 	private String firstName;
 	private String lastName;
 	private String ssn;

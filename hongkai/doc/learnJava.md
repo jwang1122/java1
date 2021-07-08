@@ -1,8 +1,8 @@
 <h1> Java learning Notes </h1>
-[](../doc/myIcons.md)
+[Markdown Shared](myIcons.md)
 
-## Table of contents
-- [Table of contents](#table-of-contents)
+## Table of Contents
+- [Table of Contents](#table-of-contents)
 - [Java API Documentation](#java-api-documentation)
 - [Variable naming](#variable-naming)
 - [Variable and Memory](#variable-and-memory)
@@ -16,14 +16,11 @@
 - [Operators](#operators)
 - [If-else (execution control)](#if-else-execution-control)
 - [Loop](#loop)
-	- [For loop](#for-loop)
-	- [While loop](#while-loop)
 - [Method (Function)](#method-function)
 - [Simple Math](#simple-math)
 - [Exception](#exception)
 - [File Access](#file-access)
 - [OOP](#oop)
-- [class](#class)
   
 
 
@@ -45,13 +42,14 @@ int 1a = 0; // 1a is invailid variable name, cause Syntax error
 
 ## Variable and Memory
 ![](images/chineseMedicine.jpg)
-The computer memory is something similar as Chinese medicine drawer. You can put something in the drawer. and then you can get what yuo put in, the only difference is, once you put stuff in the computer memory, you can get as many as you want; but the medicine drawer will be empty once you take out too much.
+
+The computer memory is something similar as Chinese medicine drawer. You can put something into the drawer, and then you can get what you put in. The only difference is, once you put stuff in computer memory, you can get as many as you want; but the medicien drawer will be empty one you take out too much. 
 
 ![](images/memory.gif)
-create a variable just like put a label on the drawer, so you can put more than one labels on the same drawer, or no label at all
+create a variable just like put a label on the drawer. so you can put more than one labels on the same drawer, or no label at all.
 
 ## First Java Program
-[Hello.java](../../hongkai/src/com/huaxia/hongkai/Hello.java)
+[Hello.java](../src/com/huaxia/hongkai/Hello.java)
 ```java
 class Hello {
 	// my main method to run this class
@@ -61,27 +59,42 @@ class Hello {
 
 }
 ```
-
+❓✔️❌
 ## Basic skills
 * ❓What is the method signature?
 >✔️1. method name; 2. argument type and number of arguments; 3. maybe return type
 * ❓What are the modifiers?
->✔️
+>✔️public, private, static, protected
 
 * ❓Can I rename main method?
->✔️
+>✔️No, you cannot!
 
 * ❓How to create a package?
->✔️Right-click **src** folder > New > Package > enter package name
+>✔️Right-click **src** folder ⟹ New ⟹ Package ⟹ enter package name
 
 * ❓How to create Java Class?
->✔️
+>✔️Right-click package name ⟹ New ⟹ Class ⟹ enter class name
 
 * ❓How to run java class?
->✔️
+>✔️there are 3 ways to run
+	1. Click green run button on toolbar
+	2. Click Run menu ⟹ Run As ⟹Java Application
+	3. Right-click in Editor window ⟹ Run As ⟹ Java Application
 
 * ❓How to rename a class file?
->✔️
+>✔️Right-Click file name on Explore ⟹ Refactor ⟹ Rename
+
+* ❓How do I configure the Run environment?
+>✔️There are more than one to do this
+	- Click the dropdown button beside green run button on toolbar ⟹ Run Configurations
+	- Run menu ⟹ Run Configurations...
+	- Right-click in Editor window ⟹ Run As ⟹ Run Configurations...
+* ❓What is 'Run Configurations'?
+	1. configure the main class (the class has main() method)
+	2. insert runtime arguments
+	3. pick different JRE library
+	4. modify dependencies
+	5. more ...
 
 ## Comments
 * Single line comment
@@ -98,16 +111,19 @@ comment.
 */
 ```
 
+---
+[Table of Contents](#table-of-contents)
+
 ## Print
-* [System.out.print](../../hongkai/src/com/huaxia/hongkai/Print.java)
+* [System.out.print](../src/com/huaxia/hongkai/Print.java)
 * System.out.println(String);
 * System.out.print(String);
 * System.out.printf(format, args);
 
-![](./images/languageBasics.png)
+![](images/languageBasics.svg)
 
 ## Primitive Data Type
-[Data Type](../../hongkai/src/com/huaxia/hongkai/DataType.java)
+[Data Type](../src/com/huaxia/hongkai/DataType.java)
 ```java
 	boolean flag = false; // true, false
 	byte myByte = 127; // 8 bits, -128~127
@@ -118,20 +134,29 @@ comment.
 	float x = 129.3F; // f or F on the end
 	double y = 12.3;
 ```
+The above data is in the order of the container size.
+
+You can assign small value to bigger container, but cannot assign big value to smaller container. If you know what you are doing, you can cast big value to smaller container, which may truncat your data.
+
 ## Array
-Array is a special data type, which contains a list of elements of all kinds of data types. (int[], String[], Hello[])
+Array is a special data type, which contains a list of element of all kinds data type. (int[], String[], Hello[])
 * [Array.java](../src/com/huaxia/hongkai/Array.java)
+* Sort integer Array: Arrays.sort(<array>)
+* Sort String Array: Arrays.sort(<String array>)
+* Sort Any class you defined(Hello): Arrays.sort(), implements Comparable ⟹ create compareTo(Object obj) method in your class(Hello). Then sort by name, or by age, which are different attributes of the Hello class. [Hello.java](../src/com/huaxia/hongkai/Hello.java)
 
 ## ArrayList
 ArrayList is JDK build in class, which is resizable-array implementation of the List interface.
 
 the element inside the ArrayList is ordered, which means each element on specific index.
 
-CRUD on ArrayList
-* [](../src/com/huaxia/hongkai/MyArrayList.java)
+CRUD (Create, Retrieve, Update, Delete) on ArrayList, ArrayList is mutable.
+
+* [MyArrayList.java](../src/com/huaxia/hongkai/MyArrayList.java)
+* Sort ArrayList: Collections.sort(<arrayList>)
 
 ## Operators
-* [Operator](../../hongkai/src/com/huaxia/hongkai/Operators.java)
+* [Operator](../src/com/huaxia/hongkai/Operator.java)
 * Arithmetic operator +, -, *, /, %
 * Compound assignment operator +=, -=, *=, /=, %=
 * Binary operator ++, --
@@ -140,71 +165,23 @@ CRUD on ArrayList
 * Ternary Operator a>b?a:b
 
 ## If-else (execution control)
-
-From Instructor to Everyone:  09:23 AM
-```mermaid
-graph TB
-A((start))
-B{if <condition>:}
-C[if code block]
-D[else code block]
-E[end]
-
-
-A-->B
-B--True-->C-->E
-B--False-->D-->E
-
-A1((start))
-B1{if <condition>:}
-B2{else if <condition>:}
-C1[if code block<br>line-22]
-D1[else if code block<br>line-24]
-E1[end]
-F1[else code block<br>line-26]
-
-A1-->B1
-B1--True-->C1-->E1
-B1--False-->B2--True-->D1-->E1
-B2--False-->F1-->E1
-
-
-classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
-classDef js fill:yellow,stroke:#DE9E1F,stroke-width:2px;
-classDef start fill:green,stroke:#DE9E1F,stroke-width:2px;
-classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px;
-class A,A1 start
-class B,B1,B2 html
-class E,E1 end1
-```
-
-* [if-else if-else](../../hongkai/src/com/huaxia/hongkai/IfElse.java)
+* [if, if-else, if-else if-else](../src/com/huaxia/hongkai/IfElse.java)
 * [Switch](../src/com/huaxia/hongkai/Switch.java)
-
+  
 ## Loop
-### For loop
-
-![](images/Loop.svg)
-
-### While loop
-
-![](images/while.svg)
-
-![](images/DoWhile.svg)
-
-* [for/while loop](../../hongkai/src/com/huaxia/hongkai/Loop.java)
+* [for/while loop](../src/com/huaxia/hongkai/Loop.java)
 
 ---
-[Table of contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 ## Method (Function)
-* method has signature(fingerprint)
+* method has signature (finger print)
 * method overloading
-* ❓What is a static way of calling a method
-* ✔️Use class name to call static method
-* [Method in java](../src/com/huaxia/hongkai/Method.java)
-* [Use the class within the same package](../src/com/huaxia/hongkai/TestMethod.java)
->privatr method can only be called inside the class, and default method can be called within the same package, and public method can be called anywhere.
+* ❓What is a static way of calling a method?
+* ✔️Use class name to call static method.
+* [Method in Java](../src/com/huaxia/hongkai/Method.java)
+* [Use the class within same package](../src/com/huaxia/hongkai/TestMethod.java)
+>private method can only be called inside the class, and default method can be called within the same package, and public method can be called anywhere.
 * [Test code on different package](../src/com/huaxia/test/TestMethod.java)
 
 ## Simple Math
@@ -216,44 +193,9 @@ class E,E1 end1
 ## OOP
 * Object Oriented Programming concept
   ![](images/oop.png)
-1. Encapsulation: 
->private modifier make variable or method in the class can only be used within the class, which makes encapsulation possible.
-2. Abstraction: abstract object in the real world to write a class
-	![](images/ClassAbstraction.png)
+* Encapsulation: private, protected
+* Abstraction: abstract object in the real world to write a class.
+  ![](images/ClassAbstraction.png)
 
-[First Class](../src/com/huaxia/hongkai/Air.java)
-```mermaid
-classDiagram
-class Air{
-	-isPoison:boolean
-	type:String
-	smogSize:double
-	OxygenPercentage:double
-	NitrogenPercentage:double
-	Air(boolean, String, double)
-	+blow()
-	+pumpFlatTire()
-}
-```
-3. Inheritance: sub class inherit features from super class
-```mermaid
-classDiagram
-class Person{
-	- firstName:String
-	- lastName:String
-	- SSN:String
-	- age:int
-	- gender:int
-	+ getFirstName()
-	+ setFirstName(String firstName)
-	+ getAge()
-	+ setAge(int age)
-}
-
-class Student{
-	- =studentID:String
-	- grad:int
-	+turnInHomeworks
-}
-```
-## class
+3. Inheritance: subclass something I dunno I lost a lot of class
+4. I don't knooooow :(

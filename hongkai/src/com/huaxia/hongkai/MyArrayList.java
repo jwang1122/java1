@@ -1,6 +1,7 @@
 package com.huaxia.hongkai;
 
 import java.util.ArrayList;
+import java.util.Collections;
 /**
  * 
  * @author Hongkai Z
@@ -38,7 +39,14 @@ public class MyArrayList {
 
 		// remove value
 		printArrayList(al);
-//		al.remove(new Integer(3)); // remove value need pass an Object, NOT int
+		al.remove(new Integer(3)); // remove value need pass an Object, NOT int
+		printArrayList(al);
+		
+		// sort ArrayList
+		System.out.println("Original array list");
+		printArrayList(al);
+		Collections.sort(al);
+		System.out.println("Sorted array list");
 		printArrayList(al);
 
 	}
