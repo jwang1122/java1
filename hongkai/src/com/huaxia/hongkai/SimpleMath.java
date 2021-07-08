@@ -22,10 +22,10 @@ public class SimpleMath {
 		}
 	}
 
-	static void throw2Dices() {
+	static void throw2Dices() { // build a real game, get name from players, take turn until user terminates the game. Hint: while(true)		
 		Random rand = new Random();
 		Scanner input = new Scanner(System.in);
-		System.out.print("John's turn: ");
+		System.out.print("Johnny's turn: ");
 		input.nextLine();
 		int dice1 = rand.nextInt(6) + 1;
 		int dice2 = rand.nextInt(6) + 1;
@@ -36,23 +36,25 @@ public class SimpleMath {
 		int dice3 = rand.nextInt(6) + 1;
 		int dice4 = rand.nextInt(6) + 1;
 		System.out.println(dice3 + "," + dice4 + " = " + (dice3 + dice4));
-
-		int john = dice1 + dice2;
+		input.close();
+		int johnny = dice1 + dice2;
 		int connor = dice3 + dice4;
-		if (john > connor) {
-			System.out.println("John wins!!");
-		} else if (john < connor) {
+		if (johnny > connor) {
+			System.out.println("Johnny wins!!");
+		} else if (johnny < connor) {
 			System.out.println("Connor wins!!");
 		} else {
-			System.out.println("John and Connor ties!!");
+			System.out.println("Johnny and Connor ties!!");
 		}
+		
+		System.out.println("Game over...");
 	}
 
 	public static void main(String[] args) {
 		// the main method provide place for you to test your code above
 //		doMath();
 //		generateRandomNumber4Dice();
-		throw2Dices();
+//		throw2Dices();
 	}
 
 }

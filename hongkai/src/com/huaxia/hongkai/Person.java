@@ -1,17 +1,21 @@
 package com.huaxia.hongkai;
 
 public class Person {
-	private String firstName;
+	protected String firstName;
 	private String lastName;
 	private String ssn;
 	private int age;
-	private int gender; //1: male, 2:female, 0: other
+	private int gender; //1: male, 2:famale, 0: other
 	
-	protected String getFirstName() { // a getter
+	public String getOccupation() {
+		return "None";
+	}
+	
+	public String getFirstName() { // a getter
 		return firstName;
 	}
 	
-	protected void setFirstName(String firstName) { // a setter
+	public void setFirstName(String firstName) { // a setter
 		this.firstName = firstName;
 	}
 
@@ -46,7 +50,11 @@ public class Person {
 	protected void setGender(int gender) {
 		this.gender = gender;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", ssn=" + ssn + "]";
+	}
 	
 	
 }
