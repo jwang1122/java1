@@ -146,8 +146,11 @@ You can assign small value to bigger container, but cannot assign big value to s
 
 ## Array
 Array is a special data type, which contains a list of element of all kinds data type. (int[], String[], Hello[])
-[Array.java](../src/com/huaxia/java1/Array.java)
-
+* [Array.java](../src/com/huaxia/java1/Array.java)
+* Sort integer Array: Arrays.sort(<array>)
+* Sort String Array: Arrays.sort(<String array>)
+* Sort Any class you defined(Hello): Arrays.sort(), implements Comparable ⟹ create compareTo(Object obj) method in your class(Hello). Then sort by name, or by age, which are different attributes of the Hello class. [Hello.java](../src/com/huaxia/java1/Hello.java)
+  
 ## ArrayList
 ArrayList is JDK build in class, which is resizable-array implementation of the List interface.
 
@@ -155,7 +158,8 @@ the element inside the ArrayList is ordered, which means each element on specifi
 
 CRUD (Create, Retrieve, Update, Delete) on ArrayList, ArrayList is mutable.
 
-[MyArrayList.java](../src/com/huaxia/java1/MyArrayList.java)
+* [MyArrayList.java](../src/com/huaxia/java1/MyArrayList.java)
+* Sort ArrayList: Collections.sort(<arraylist>)
 
 ## Operators
 * [Operator](../src/com/huaxia/java1/Operator.java)
@@ -236,6 +240,7 @@ class E,E1 end1
 
 
 ## Simple Math
+* [Simple math: add, random, ](../src/com/huaxia/java1/SimpleMath.java)
 
 ## Exception
 
@@ -306,4 +311,5 @@ where the Student class is subclass of Person class, we call the Person as Super
 4. Polymorphism: give different answer for the same question from different class. (异类同功)
    
 [Test Polymorphism](../src/com/huaxia/test/TestMethod.java)
+
 ## class

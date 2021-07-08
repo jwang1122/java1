@@ -1,20 +1,22 @@
 package com.huaxia.java1;
 
+import java.util.Arrays;
 
 /**
  * To declare an array, define a variable type with square brackets:
  * 
  * int[] myIntegers; 
  * String[] myString;
- * 
+ *
+ * @see Hello
  * @author cyxt2
  *
  */
 public class Array {
 	
 	static int[] a = { 10, 12, 2, 33, 6, 10 }; // initialize an integer array a, premitive data array(float,double.)
-	static String[] type = { "Glass", "Paper", "China" };
-	static Hello[] helloes = {new Hello("Connor", 11), new Hello("John", 12), new Hello("Joey", 13)};
+	static String[] type = { "Glass", "Plastic", "Paper", "China" }; // cup type
+	static Hello[] helloes = {new Hello("Connor", 15), new Hello("John", 12), new Hello("Joey", 13)};
 	
 	public static void main(String[] args) {
 		for (int i=0; i< a.length; i++) { // for-loop
@@ -60,6 +62,21 @@ public class Array {
 			System.out.print(x + " ");
 		}
 		System.out.println();
+		
+		// sort integer Array
+		System.out.printf("Original integer array: %s\n", Arrays.toString(a));
+		Arrays.sort(a);
+		System.out.printf("Sorted integer array: %s\n", Arrays.toString(a));
+		
+		// sort String array
+		System.out.printf("Original String array: %s\n", Arrays.toString(type));
+		Arrays.sort(type);
+		System.out.printf("Sorted String array: %s\n", Arrays.toString(type));
+		
+		// sort Hello(the class we created) object array
+		System.out.printf("Original Hello array: %s\n", Arrays.toString(helloes));
+		Arrays.sort(helloes);
+		System.out.printf("Sorted Hello array: %s\n", Arrays.toString(helloes));
 		
 	}
 }

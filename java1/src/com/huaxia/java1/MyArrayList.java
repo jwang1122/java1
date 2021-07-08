@@ -1,6 +1,7 @@
 package com.huaxia.java1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Resizable-array implementation of the List interface.
@@ -43,12 +44,20 @@ public class MyArrayList {
 		al.remove(new Integer(3)); // remove value need pass an Object, NOT int
 		printArrayList(al);
 		
+		// sort ArrayList
+		al.set(0, 5);
+		System.out.println("Original array list:");
+		printArrayList(al);
+		Collections.sort(al);
+		System.out.println("Sorted array list:");
+		printArrayList(al);
+		
 	}
 
 	// method should have single responsibility, and reusable
 	static void printArrayList(ArrayList<Integer> al) {
 		for(int i=0; i<al.size(); i++) {
-			System.out.print(i+"="+ al.get(i) +", ");
+			System.out.print(al.get(i) +", ");
 		}
 		System.out.println();		
 	}
