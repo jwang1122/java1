@@ -1,9 +1,9 @@
 package com.huaxia.test;
 
-import com.huaxia.java1.Method; // Use the class in other package need import
-import com.huaxia.java1.Person;
-import com.huaxia.java1.Student;
-import com.huaxia.java1.Teacher;
+import com.huaxia.hongkai.Method; // Use the class in other package need import
+import com.huaxia.hongkai.Person;
+import com.huaxia.hongkai.Student;
+import com.huaxia.hongkai.Teacher;
 
 /**
  * Running class with different package of @see(Method) class, so we need import
