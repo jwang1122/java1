@@ -1,4 +1,4 @@
-package com.huaxia.hongkai.ifelse;
+package com.huaxia.hongkai.homework;
 
 /**
  * * Write a Java program to print numbers between 1 to 100 which are divisible
