@@ -22,7 +22,7 @@ Expected Output :
 - - - - - - - - - -                                                                                           
 - - - - - - - - - -                                                                                           
 - - - - - - - - - -                                                                                           
-- - - - - - - - - -              ten "-"                                                                             
+- - - - - - - - - -                                                                                        
 - - - - - - - - - -                                                                                           
 - - - - - - - - - -                                                                                           
 - - - - - - - - - -                                                                                           
@@ -34,22 +34,32 @@ Expected Output :
 
 public class ArrayHW03 {
 	
-	static String[] grid1 = {"","","","","","","","","",""};
+	static String[] emptyGrid10 = {"","","","","","","","","",""};
 	
-	public static void printGrid(String lineSection, int gridX, String[] parameterGrid) {
+	public static String[] printGrid(String lineSection, int gridX, String[] parameterGrid) {
 		String arrayLine = "";
 		for (int i = 0; i < gridX; i++) {
 			arrayLine += lineSection;
 		}
 		String[] returnGrid = parameterGrid;
 		for (int i = 0; i < returnGrid.length; i++) {
-			;
+			returnGrid[i] = arrayLine;
+		}
+		return returnGrid;
+	}
+	
+	public static void printStringArray(String[] methodArray) {
+		for (String methodArrayItem: methodArray) {
+			System.out.println(methodArrayItem);
 		}
 	}
 	
 	public static void main(String[] args) {
-		
-		printGrid("0  ", 10, grid1);
+		String[] printGrid;
+		printGrid = printGrid(" 0 ", 10, emptyGrid10);
+		printStringArray(printGrid);
+		printGrid = printGrid("- ", 10, emptyGrid10);
+		printStringArray(printGrid);
 	}
 
 }
