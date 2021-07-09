@@ -12,8 +12,8 @@ public class TestMethod {
 		double rst = Method.add(5, 5); // use class name call the method
 		System.out.println(rst);
 		
-		Method obj = new Method();		
-		rst = obj.add(3.4, 6.5);
+//		Method obj = new Method();		
+		rst = Method.add(3.4, 6.5);
 		System.out.println(rst);		
 	}
 

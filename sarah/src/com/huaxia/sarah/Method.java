@@ -32,8 +32,8 @@ public class Method {
 		double result = add(4, 5); // assign small value to a big contains in the memory
 		System.out.println(result);
 		
-		Method obj = new Method();
-		result = obj.add(1.2, 3.4); // create instance and call non-static method
+//		Method obj = new Method();
+		result = Method.add(1.2, 3.4); // create instance and call non-static method
 		System.out.println(result);
 		
 	}

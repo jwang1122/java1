@@ -1,6 +1,7 @@
 package com.huaxia.sarah;
 
 import java.util.ArrayList;
+import java.util.Collections;
 /**
  * Resizable-array implementation of List interface
  * the element inside ArrayList is ordered, which means each element on specific index
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 public class MyArrayList {
 	
 	//CRUD: Create, Retrieve, Update, Delete
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		// create ArrayList
 		ArrayList<Integer> al = new ArrayList<>(); // Specify single data type of ArrayList
@@ -42,6 +44,14 @@ public class MyArrayList {
 		// remove value
 		printArrayList(al);
 		al.remove(new Integer(3)); // remove value need pass an Object, NOT int
+		printArrayList(al);
+		
+		// sort ArrayList
+		al.set(0, 5);
+		System.out.println("Original array list:");
+		printArrayList(al);
+		Collections.sort(al);
+		System.out.println("Sorted array list:");
 		printArrayList(al);
 		
 	}

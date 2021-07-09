@@ -1,11 +1,15 @@
 package com.huaxia.sarah;
 
 public class Person {
-	private String firstName;
+	protected String firstName;
 	private String lastName;
 	private String ssn;
 	private int age;
 	private int gender; //1: male, 2: female, 0: other
+	
+	public String getOccupation() {
+		return "None";
+	}
 	
 	public String getFirstName() { // a getter
 		return firstName;
@@ -45,6 +49,11 @@ public class Person {
 
 	protected void setGender(int gender) {
 		this.gender = gender;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", ssn=" + ssn + "]";
 	}
 	
 	

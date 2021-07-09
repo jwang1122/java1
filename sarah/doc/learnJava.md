@@ -18,6 +18,9 @@
 	- [For Loop](#for-loop)
 	- [While Loop](#while-loop)
 - [Method (Function)](#method-function)
+- [Simple Math](#simple-math)
+- [Exception](#exception)
+- [File Access](#file-access)
 - [OOP](#oop)
 - [Class](#class)
   
@@ -142,7 +145,10 @@ You can assign small value to bigger container, but cannot assign big value to s
 
 ## Array
 Array is a special data type, which contains a list of element of all kinds data type.(int[], String[], Hello[])
-[Array.java](../src/com/huaxia/sarah/Array.java)
+* [Array.java](../src/com/huaxia/sarah/Array.java)
+* Sort Integer Array: Arrays.sort(<array>)
+* * Sort String Array: Arrays.sort(<String array>)
+* * Sort Any class you defined(Hello): Arrays.sort(), implements Comparable ⟹ create compareTo(Object obj) method in your class(Hello). Then sort by name, or by age, which are different attributes of the Hello class. [Hello.java](../src/com/huaxia/sarah/Hello.java)
 
 ## ArrayList
 ArrayList is JDK biuld in class, which is resizable-array implementation of List interface
@@ -151,7 +157,8 @@ the element inside the ArrayList is ordered, which means each element on specifi
 
 CRUD (Create, Retrieve, Update, Delete) on ArrayList, ArrayList is mutable
 
-[MyArrayList.java](../src/com/huaxia/sarah/MyArrayList.java)
+* [MyArrayList.java](../src/com/huaxia/sarah/MyArrayList.java)
+* Sort ArrayList: Collection.sort(<arrayList>)
 
 ## Operators
 * [Operator](../src/com/huaxia/java1/Operator.java)
@@ -228,6 +235,13 @@ class E,E1 end1
 >private method can only be called inside the class, and default method can be called within the same package, and public method can be called anywhere
 *[Test code on different package](../src/com/huaxia/sarah/test/TestMethod.java)
 
+## Simple Math
+* [Simple math: add, random, ](../src/com/huaxia/sarah/SimpleMath.java)
+
+## Exception
+
+## File Access
+
 ## OOP
 * Object Oriented Programming concept
 
@@ -281,4 +295,15 @@ class Teacher{
 Person <|-- Student:student is person
 Person <|-- Teacher:teacher is person
 ```
+
+Student is a Person, the relationship between Student and Person is **is relation**.
+Where the Student class is subclass of Person class, we call the Person as Superclass of Student class.
+
+* [Person, Superclass](../src/com/huaxia/sarah/Person.java)
+* [Student, Subclass of Person](../src/com/huaxia/sarah/Student.java)
+* [Teacher, Subclass of Person](../src/com/huaxia/sarah/Teacher.java)
+
+4. Polymorphism: Give different amswer for the same question from different classes. (异类同功)
+
+[Test Polymorphism](../src/com/huaxia/sarah/test/TestMethod.java)
   ## Class
