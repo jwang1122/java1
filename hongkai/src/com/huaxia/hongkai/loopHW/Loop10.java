@@ -1,6 +1,6 @@
 package com.huaxia.hongkai.loopHW;
 
-
+// Loop10.java version2!!!
 /**
  * * Write a Java program to print an American flag on the screen. Go to the editor
 
@@ -16,59 +16,44 @@ Expected Output
 * * * * * * ==================================      7                    
  * * * * *  ==================================       8                   
 * * * * * * ==================================        9    
-==============================================         A                 
-==============================================          B                
-==============================================           C               
-==============================================            D    
-==============================================             E
-==============================================              nothing here, although that would be F
+==============================================         10                 
+==============================================          11                
+==============================================           12               
+==============================================            13    
+==============================================             14!!
+==============================================              
 
 ```
  * @author Hongkai Z
  *YOU BETTER BE HAPPY WITH THIS!!!!!
  */
 
-class Loop10 {
-	
-	String repeatItem = "";
-	int repeat;
-	String returnItem = "";
-	
-	Loop10(String rI, int r) {
-		repeatItem = rI;
-		repeat = r;
-		for (int i = 0; i<repeat;++i) {
-			returnItem += repeatItem;
-		}
-	}
-	public String toString() { // this took forever to configure, because I had no idea what I was doing
-		return returnItem;
-	}
+public class Loop10 {
 
 	public static void main(String[] args) {
-		Loop10 str1;
-		Loop10 str2;
+		String str1 = designLine("* ", 6) + designLine("=", 34);
+		String str2 = " " + designLine("* ", 5) + " " + designLine("=", 34);
+		String str3 = designLine("=", 46);
 		
-		for (int j=0;j<4;++j) {
-			str1 = new Loop10("* ", 6);
-			str2 = new Loop10("=", 34);
-			System.out.println(str1 + "" + str2);
-			str1 = new Loop10("* ", 5);
-			str2 = new Loop10("=", 34);
-			System.out.println(" " + str1 + " " + str2);
-		}
-		str1 = new Loop10("* ", 6);
-		str2 = new Loop10("=", 34);
-		System.out.println(str1 + "" + str2);
-		
-		for (int j=0;j<6;++j) { // for such a long loop assignment, I only used 3 for loops!
-			str1 = new Loop10("=", 46);
+		for (int j = 0; j < 4; ++j) {
 			System.out.println(str1);
+			System.out.println(str2);
 		}
-		
-//		String a = "==============================================";
-//		System.out.print(a.length());
+		System.out.println(str1);
+		for (int j = 0; j < 6; ++j) {
+			System.out.println(str3);
+		}
 
+//		String a = "==================================";
+//		System.out.print(a.length());
+	}
+
+	static String designLine(String writeItem, int num) {
+		String returnItem = "";
+		for (int i = 0; i < num; ++i) {
+			returnItem += writeItem;
+		}
+		return returnItem;
 	}
 
 }

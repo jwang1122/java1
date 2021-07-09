@@ -1,9 +1,6 @@
 package com.huaxia.java1;
-<<<<<<< HEAD
-=======
 
 import java.util.Scanner;
->>>>>>> branch '9.00' of https://github.com/jwang1122/java1
 
 public class Loop {
 
@@ -61,6 +58,12 @@ public class Loop {
 			i++;
 		}
 		System.out.println(sum);
+		
+		// do-while loop
+		i = 6;
+		do {
+			System.out.println("do-while block: " + i++); // this block will be executed at least once
+		}while(i<5);
 	}
 
 }
