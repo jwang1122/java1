@@ -13,7 +13,7 @@ package com.huaxia.java1;
  * 3. methods
  * 4. Representative (toString() method)
  */
-class Hello {
+class Hello implements Comparable<Hello>{
 	String name = "";
 	int age; // by default, the age == 0
 
@@ -27,6 +27,11 @@ class Hello {
 		this.age = age;
 	}
 
+	public boolean equals(Object obj) {
+		Hello h = (Hello)obj;
+		return this.name.equals(h.name);
+	}
+	
 	void sayHello() {
 		System.out.println("Hello, " + this.name + "!" );
 	}
@@ -61,5 +66,30 @@ class Hello {
 		System.out.println(s1==s2);
 		System.out.println(s1.equals(s2));
 	}
+
+	/**
+	 * sort by name
+	 */
+	@Override
+	public int compareTo(Hello h) {
+		return name.compareTo(h.name);
+	}
+
+	
+	/**
+	 * sort by age
+	 */
+//	@Override
+//	public int compareTo(Object o) {
+//		Hello h = (Hello)o;
+//		if (age<h.age) {
+//			return -1;
+//		}
+//		if (age>h.age) {
+//			return 1;
+//		}
+//		return 0;
+//	}
+
 
 }

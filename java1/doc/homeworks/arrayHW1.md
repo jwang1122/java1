@@ -1,4 +1,4 @@
-* Write a Java program to sort a numeric array and a string array.
+* Write a Java program to **sort** a numeric **array** and a string array.
 
 for example:
 

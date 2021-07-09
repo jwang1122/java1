@@ -8,7 +8,7 @@ package com.huaxia.java1;
  *
  */
 public class Air {
-	boolean isPoison;
+	private boolean isPoison;
 	String type;
 	double smogSize; 
 	double OxygenPercentage;
@@ -24,7 +24,7 @@ public class Air {
 		return "isPoison=" + this.isPoison + ", type=" + this.type;
 	}
 	
-	public void blow() {
+	private void blow() {
 		System.out.println("Blow the air now... ...");
 	}
 	

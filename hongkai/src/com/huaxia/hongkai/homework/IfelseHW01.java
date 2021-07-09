@@ -1,4 +1,4 @@
-package com.huaxia.hongkai.ifelse;
+package com.huaxia.hongkai.homework;
 
 import java.util.Scanner;
 
