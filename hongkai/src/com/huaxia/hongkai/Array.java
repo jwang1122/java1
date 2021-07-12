@@ -15,8 +15,8 @@ import java.util.Arrays;
 public class Array {
 	
 	static int[] a = { 10, 12, 2, 33, 6, 10 }; // initialize an integer array a, primitive data array(float,double.)
-	static String[] type = { "Glass", "Paper", "Plastic", "China" };
-	static Hello[] helloes = { new Hello("Connor", 15), new Hello("Sarah", 12), new Hello("Joey", 13) };
+	static String[] type = { "Glass", "Plastic", "Paper", "China" }; // cup type
+	static Hello[] helloes = {new Hello("Connor", 15), new Hello("John", 12), new Hello("Joey", 13)};
 
 	public static void main(String[] args) {
 		for (int i=0; i< a.length; i++) { // for-loop
@@ -77,6 +77,7 @@ public class Array {
 		System.out.printf("Original Hello array: %s\n", Arrays.toString(helloes));
 		Arrays.sort(helloes);
 		System.out.printf("Sorted Hello array: %s\n", Arrays.toString(helloes));
+		
 	}
 
 }
