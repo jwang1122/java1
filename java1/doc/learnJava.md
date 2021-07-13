@@ -22,7 +22,7 @@
 - [>Homework: make code change to two players compete each other.](#homework-make-code-change-to-two-players-compete-each-other)
 - [Method (Function)](#method-function)
 - [Simple Math](#simple-math)
-- [Exception](#exception)
+- [Exception and how to catch it](#exception-and-how-to-catch-it)
 - [File Access](#file-access)
 - [OOP](#oop)
 - [class](#class)
@@ -79,11 +79,19 @@ class Hello {
 	- Run menu ⟹ Run Configurations...
 	- Right-click in Editor window ⟹ Run As ⟹ Run Configurations...
 * ❓What is 'Run Configurations'?
+```answer
+	✔️
 	1. configure the main class (the class has main() method)
 	2. insert runtime arguments
 	3. pick different JRE library
 	4. modify dependencies
 	5. more ...
+```
+* ❓How many different comment? and What comment can do?
+>✔️
+
+* ❓How do I closs all other open files except my edit file?
+>✔️
 
 ## Variable naming
 1. variable name cannot start with number
@@ -258,7 +266,39 @@ C--write-->M
 ## Simple Math
 * [Simple math: add, random, ](../src/com/huaxia/java1/SimpleMath.java)
 
-## Exception
+## Exception and how to catch it
+```mermaid
+graph TB
+A[try]
+TB1[try-block<br>good code]
+TB2[try-block<br>cause Exception]
+TB3[try-block<br>other code]
+B[catch]
+CB[catch-block]
+END[end]
+
+A-->TB1-->TB2-->B-->CB-->END
+A-->TB1-->TB3-->END
+
+classDef trycatch fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+
+class A,B trycatch
+```
+❓Why we need try-catch block?
+>✔️
+
+❓Why Exception in SimpleMath cause compiler error?
+>✔️
+
+❓Why Exception is generic Exception?
+>✔️All other Exception classes extends (**inherits**) from Exception class, catch Exception will catch them all.
+![](images/exception.png)
+
+1. catch generic Exception will catch all kinds of Exceptions
+2. you can catch specific Exception by specific name such as NullPointerException on purpose.
+3. you can catch more than one specific Exceptions
+
+[Exception](../src/com/huaxia/java1/Exception.java)
 
 ## File Access
 
@@ -324,11 +364,23 @@ where the Student class is subclass of Person class, we call the Person as Super
 * [Student, Subclass of Person](../src/com/huaxia/java1/Student.java)
 * [Teacher, Subclass of Person](../src/com/huaxia/java1/Teacher.java)
 
-4. Polymorphism: give different answer for the same question from different class. (异类同功)
+4. Polymorphism: give different answer for the same question from different classes which inherit from same superclas or interface. (异类同功)
    
 [Test Polymorphism](../src/com/huaxia/test/TestMethod.java)
 
 ## class
+❓What functions defined in Object class which are useful for us?
+✔️the functions available in Object are
+1. default constructor
+2. toString()
+
+[getter, setter, toString, default constructor](../src/com/huaxia/java1/Superclass1.java)
+❓How do I create getter/setter?
+✔️
+❓How do I override toString() method?
+✔️
+❓Why I want to override toString()?
+✔️
 
 ## Unit test
 
