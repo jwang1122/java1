@@ -1,7 +1,6 @@
 ## Useful Icons
 
-⚡️📄📝✔️❌❓❗️📌🔨💡☝️👉👇☝️👍👎👌💾🗑🐛📒⚠️😄😢♻️🔥🛠📐🎯✉️☎️
-
+❓✔️❌⚡️📄📝❗️📌🔨💡☝️👉👇☝️👍👎👌💾🗑🐛📒⚠️😄😢♻️🔥🛠📐🎯✉️☎️
 
 ## Color picker
 [Pick color website](https://www.webfx.com/web-design/color-picker/)
@@ -13,10 +12,12 @@
 ÷ | div
 ± | pm
 ° | degree
+∞ | infty
 ϕ | phi
 Φ | Phi
 θ | theta
 α | alpha
+β | beta
 γ | gamma
 δ | delta
 μ | mu
@@ -26,7 +27,6 @@
 ⇒ | Rightarrow
 ⟹| Longrightarrow
 ⇓ | Downarrow
-
 
 ## Sample File Structure:
 
