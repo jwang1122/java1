@@ -6,7 +6,7 @@
 - [Java API Documentation](#java-api-documentation)
 - [First Java Program](#first-java-program)
 - [Getting Start](#getting-start)
-- [Basic skills](#basic-skills)
+- [Basic skills(questions and answers)](#basic-skillsquestions-and-answers)
 - [Variable naming](#variable-naming)
 - [Variable and Memory](#variable-and-memory)
 - [Comments](#comments)
@@ -19,12 +19,16 @@
 - [Loop](#loop)
 	- [For loop](#for-loop)
 	- [While loop](#while-loop)
+- [>Homework: make code change to two players compete each other.](#homework-make-code-change-to-two-players-compete-each-other)
 - [Method (Function)](#method-function)
 - [Simple Math](#simple-math)
 - [Exception](#exception)
 - [File Access](#file-access)
 - [OOP](#oop)
 - [class](#class)
+- [Unit test](#unit-test)
+- [Logging](#logging)
+- [Blackjack Card Game](#blackjack-card-game)
   
 
 
@@ -45,7 +49,7 @@ class Hello {
 
 ## Getting Start
 ❓✔️❌
-## Basic skills
+## Basic skills(questions and answers)
 * ❓What is the method signature?
 >✔️1. method name; 2. argument type and number of arguments; 3. maybe return type
 * ❓What are the modifiers?
@@ -224,13 +228,25 @@ class E,E1 end1
 
 * [for/while loop](../src/com/huaxia/java1/Loop.java)
 
+* [Guess number game](../src/com/huaxia/java1/GuessNumber.java)
 
+>Homework: make code change to two players compete each other.
 ---
 [Table of Contents](#table-of-contents)
 
+```mermaid
+graph LR
+A[Java programming]
+C[class]
+M[methods]
+
+A--write-->C
+C--write-->M
+```
+
 ## Method (Function)
 * method has signature (finger print)
-* method overloading
+* method overloading (same name different signature)
 * ❓What is a static way of calling a method?
 * ✔️Use class name to call static method.
 * [Method in Java](../src/com/huaxia/java1/Method.java)
@@ -313,3 +329,9 @@ where the Student class is subclass of Person class, we call the Person as Super
 [Test Polymorphism](../src/com/huaxia/test/TestMethod.java)
 
 ## class
+
+## Unit test
+
+## Logging
+
+## Blackjack Card Game

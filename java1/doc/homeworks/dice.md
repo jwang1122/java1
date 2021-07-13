@@ -1,0 +1,1 @@
+* refer to SimpleMath.java throw2Dices() method, create a game let two players take turn throw two dices, who gets the large sum of two dices win the game. then ask player wants more game or not, if they want to play more, continue the game.

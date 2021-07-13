@@ -10,7 +10,7 @@ public class SimpleMath {
 	}
 
 	static void doMath() {
-		double x = SimpleMath.add(3, 4);
+		double x = SimpleMath.add(3, 4); // static way to call add()
 		System.out.println(x);
 	}
 
@@ -22,6 +22,7 @@ public class SimpleMath {
 		}
 	}
 
+	// Homework: make two players against each other
 	static void throw2Dices() { // build a real game, get name from players, take turn until user terminate the game. Hint: while(true){}
 		Random rand = new Random();
 		Scanner input = new Scanner(System.in);
@@ -50,12 +51,38 @@ public class SimpleMath {
 		System.out.println("Game over.");
 	}
 
-	public static void main(String[] args) {
+	// none static method
+	//Prime numbers are numbers that have only 2 factors: 1 and themselves. 
+	boolean isPrime(int n) {
+		boolean result = true;
+		for(int i=2; i<n; i++) {
+			if(n%i==0) {
+				result = false;	
+				break;
+			}
+		}
+		return n!=1 && result;
+	}
+	
+	double circleArea(double r) throws Exception{
+		if(r<0) {
+			throw new Exception("Radiu of circle cannot be negative.");
+		}
+		return Math.PI * r * r;
+	}
+	
+	public static void main(String[] args) throws Exception{
 		// the main method provide place for you to test you code above
 //		doMath();
 //		generateRandomNumber4Dice();
 //		throw2Dices();
-		
+		SimpleMath obj = new SimpleMath();
+		int n = 6;
+		boolean x = obj.isPrime(n);
+		System.out.printf("Is %d a prime number? %b\n",n, x);
+		double r = -2;
+		double area = obj.circleArea(r);
+		System.out.println(area);
 	}
 
 }
