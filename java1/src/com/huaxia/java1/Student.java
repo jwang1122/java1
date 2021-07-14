@@ -1,6 +1,6 @@
 package com.huaxia.java1;
 
-public class Student extends Person {
+public class Student extends Person { // is relation? the Student is a Person
 	private String studentID;
 	private int grad;
 	

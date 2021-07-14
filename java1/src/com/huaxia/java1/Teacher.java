@@ -1,6 +1,6 @@
 package com.huaxia.java1;
 
-public class Teacher extends Person {
+public class Teacher extends Person { // teacher is a person
 	private String employeeID;
 	
 	

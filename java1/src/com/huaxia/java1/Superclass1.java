@@ -1,0 +1,41 @@
+package com.huaxia.java1;
+
+/**
+ * Class <b>Object</b> is the root of the class hierarchy. 
+ * Every class has Object as a superclass. 
+ * All objects, including arrays, implement the methods of this class.
+ * 
+ * 
+ * @author John
+ *
+ */
+public class Superclass1 extends Object{ // Every class by default extends from Object class
+	private String name = "John"; // make name available on within this class, initial it with empty Sting.
+	
+	
+	public String getName() {// getter
+		return name;
+	}
+
+
+	public void setName(String name) {// setter
+		this.name = name;
+	}
+
+	// It is recommended that all subclasses override this method.
+	@Override // override decorator
+	public String toString() {
+		return "Superclass1 [name=" + name + "]";
+	}
+
+
+	public static void main(String[] args) {
+		Superclass1 sc1 = new Superclass1(); //we can use default constructor from Object class
+		System.out.println(sc1);
+		Superclass1 sc2 = new Superclass1();
+		sc2.setName("Laura");
+		System.out.println(sc2);
+		System.out.println("END");
+	}
+
+}
