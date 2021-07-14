@@ -6,7 +6,7 @@
 - [Java API Documentation](#java-api-documentation)
 - [First Java Program](#first-java-program)
 - [Getting Start](#getting-start)
-- [Basic skills](#basic-skills)
+- [Basic skills(questions and answers)](#basic-skillsquestions-and-answers)
 - [Variable naming](#variable-naming)
 - [Variable and Memory](#variable-and-memory)
 - [Comments](#comments)
@@ -19,10 +19,10 @@
 - [Loop](#loop)
 	- [For loop](#for-loop)
 	- [While loop](#while-loop)
-- [>Homework: make code change to two players](#homework-make-code-change-to-two-players)
+- [>Homework: make code change to two players compete each other.](#homework-make-code-change-to-two-players-compete-each-other)
 - [Method (Function)](#method-function)
 - [Simple Math](#simple-math)
-- [Exception](#exception)
+- [Exception and how to catch it](#exception-and-how-to-catch-it)
 - [File Access](#file-access)
 - [OOP](#oop)
 - [class](#class)
@@ -36,7 +36,7 @@
 [Java API website](https://docs.oracle.com/javase/8/docs/api/)
 
 ## First Java Program
-[Hello.java](../src/com/huaxia/hongkai/Hello.java)
+[Hello.java](../src/com/huaxia/java1/Hello.java)
 ```java
 class Hello {
 	// my main method to run this class
@@ -49,7 +49,7 @@ class Hello {
 
 ## Getting Start
 ❓✔️❌
-## Basic skills
+## Basic skills(questions and answers)
 * ❓What is the method signature?
 >✔️1. method name; 2. argument type and number of arguments; 3. maybe return type
 * ❓What are the modifiers?
@@ -79,11 +79,19 @@ class Hello {
 	- Run menu ⟹ Run Configurations...
 	- Right-click in Editor window ⟹ Run As ⟹ Run Configurations...
 * ❓What is 'Run Configurations'?
+```answer
+	✔️
 	1. configure the main class (the class has main() method)
 	2. insert runtime arguments
 	3. pick different JRE library
 	4. modify dependencies
 	5. more ...
+```
+* ❓How many different comment? and What comment can do?
+>✔️
+
+* ❓How do I closs all other open files except my edit file?
+>✔️
 
 ## Variable naming
 1. variable name cannot start with number
@@ -125,7 +133,7 @@ comment.
 [Table of Contents](#table-of-contents)
 
 ## Print
-* [System.out.print](../src/com/huaxia/hongkai/Print.java)
+* [System.out.print](../src/com/huaxia/java1/Print.java)
 * System.out.println(String);
 * System.out.print(String);
 * System.out.printf(format, args);
@@ -133,7 +141,7 @@ comment.
 ![](images/languageBasics.svg)
 
 ## Primitive Data Type
-[Data Type](../src/com/huaxia/hongkai/DataType.java)
+[Data Type](../src/com/huaxia/java1/DataType.java)
 ```java
 	boolean flag = false; // true, false
 	byte myByte = 127; // 8 bits, -128~127
@@ -150,10 +158,10 @@ You can assign small value to bigger container, but cannot assign big value to s
 
 ## Array
 Array is a special data type, which contains a list of element of all kinds data type. (int[], String[], Hello[])
-* [Array.java](../src/com/huaxia/hongkai/Array.java)
+* [Array.java](../src/com/huaxia/java1/Array.java)
 * Sort integer Array: Arrays.sort(<array>)
 * Sort String Array: Arrays.sort(<String array>)
-* Sort Any class you defined(Hello): Arrays.sort(), implements Comparable ⟹ create compareTo(Object obj) method in your class(Hello). Then sort by name, or by age, which are different attributes of the Hello class. [Hello.java](../src/com/huaxia/hongkai/Hello.java)
+* Sort Any class you defined(Hello): Arrays.sort(), implements Comparable ⟹ create compareTo(Object obj) method in your class(Hello). Then sort by name, or by age, which are different attributes of the Hello class. [Hello.java](../src/com/huaxia/java1/Hello.java)
   
 ## ArrayList
 ArrayList is JDK build in class, which is resizable-array implementation of the List interface.
@@ -162,11 +170,11 @@ the element inside the ArrayList is ordered, which means each element on specifi
 
 CRUD (Create, Retrieve, Update, Delete) on ArrayList, ArrayList is mutable.
 
-* [MyArrayList.java](../src/com/huaxia/hongkai/MyArrayList.java)
+* [MyArrayList.java](../src/com/huaxia/java1/MyArrayList.java)
 * Sort ArrayList: Collections.sort(<arraylist>)
 
 ## Operators
-* [Operator](../src/com/huaxia/hongkai/Operator.java)
+* [Operator](../src/com/huaxia/java1/Operator.java)
 * Arithmetic operator +, -, *, /, %
 * Compound assignment operator +=, -=, *=, /=, %=
 * Binary operator ++, --
@@ -212,8 +220,8 @@ class B,B1,B2 html
 class E,E1 end1
 ```
 
-* [if, if-else, if-else if-else](../src/com/huaxia/hongkai/IfElse.java)
-* [Switch](../src/com/huaxia/hongkai/Switch.java)
+* [if, if-else, if-else if-else](../src/com/huaxia/java1/IfElse.java)
+* [Switch](../src/com/huaxia/java1/Switch.java)
   
 ## Loop
 ### For loop
@@ -226,11 +234,11 @@ class E,E1 end1
 
 ![](images/DoWhile.svg)
 
-* [for/while loop](../src/com/huaxia/hongkai/Loop.java)
+* [for/while loop](../src/com/huaxia/java1/Loop.java)
 
-* [Guess number game](../src/com/huaxia/hongkai/GuessNumber.java)
+* [Guess number game](../src/com/huaxia/java1/GuessNumber.java)
 
->Homework: make code change to two players
+>Homework: make code change to two players compete each other.
 ---
 [Table of Contents](#table-of-contents)
 
@@ -239,10 +247,9 @@ graph LR
 A[Java programming]
 C[class]
 M[methods]
-W[write]
 
-A-->W-->C-->write-->M
-
+A--write-->C
+C--write-->M
 ```
 
 ## Method (Function)
@@ -250,16 +257,48 @@ A-->W-->C-->write-->M
 * method overloading (same name different signature)
 * ❓What is a static way of calling a method?
 * ✔️Use class name to call static method.
-* [Method in Java](../src/com/huaxia/hongkai/Method.java)
-* [Use the class within same package](../src/com/huaxia/hongkai/TestMethod.java)
+* [Method in Java](../src/com/huaxia/java1/Method.java)
+* [Use the class within same package](../src/com/huaxia/java1/TestMethod.java)
 >private method can only be called inside the class, and default method can be called within the same package, and public method can be called anywhere.
 * [Test code on different package](../src/com/huaxia/test/TestMethod.java)
 
 
 ## Simple Math
-* [Simple math: add, random, ](../src/com/huaxia/hongkai/SimpleMath.java)
+* [Simple math: add, random, ](../src/com/huaxia/java1/SimpleMath.java)
 
-## Exception
+## Exception and how to catch it
+```mermaid
+graph TB
+A[try]
+TB1[try-block<br>good code]
+TB2[try-block<br>cause Exception]
+TB3[try-block<br>other code]
+B[catch]
+CB[catch-block]
+END[end]
+
+A-->TB1-->TB2-->B-->CB-->END
+A-->TB1-->TB3-->END
+
+classDef trycatch fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+
+class A,B trycatch
+```
+❓Why we need try-catch block?
+>✔️
+
+❓Why Exception in SimpleMath cause compiler error?
+>✔️
+
+❓Why Exception is generic Exception?
+>✔️All other Exception classes extends (**inherits**) from Exception class, catch Exception will catch them all.
+![](images/exception.png)
+
+1. catch generic Exception will catch all kinds of Exceptions
+2. you can catch specific Exception by specific name such as NullPointerException on purpose.
+3. you can catch more than one specific Exceptions
+
+[Exception](../src/com/huaxia/java1/Exception.java)
 
 ## File Access
 
@@ -272,7 +311,7 @@ Object Oriented Programming concept
 >✔️private modifier make variable or method in the class can only be used within the class, which makes encapsulation possible.
 2. Abstraction: abstract object in the real world to write a class.
   ![](images/ClassAbstraction.png)
-[First class](../src/com/huaxia/hongkai/Air.java)
+[First class](../src/com/huaxia/java1/Air.java)
 ```mermaid
 classDiagram
 class Air{
@@ -321,11 +360,11 @@ Person <|-- Teacher:teacher is person
 Student is a Person, the relationship between Student and Person is **is relation**.
 where the Student class is subclass of Person class, we call the Person as Superclass of Student class.
 
-* [Person, Superclass](../src/com/huaxia/hongkai/Person.java)
-* [Student, Subclass of Person](../src/com/huaxia/hongkai/Student.java)
-* [Teacher, Subclass of Person](../src/com/huaxia/hongkai/Teacher.java)
+* [Person, Superclass](../src/com/huaxia/java1/Person.java)
+* [Student, Subclass of Person](../src/com/huaxia/java1/Student.java)
+* [Teacher, Subclass of Person](../src/com/huaxia/java1/Teacher.java)
 
-4. Polymorphism: give different answer for the same question from different class. (异类同功)
+4. Polymorphism: give different answer for the same question from different classes which inherit from same superclas or interface. (异类同功)
    
 [Test Polymorphism](../src/com/huaxia/test/TestMethod.java)
 
