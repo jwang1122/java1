@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Dice 
 {
-	static void throw2Dice() // build a real game, get name from players, take turns until user terminate the game Hint: while(true)
+	static void throw2Dice()
 	{
 		Random rand = new Random();
 		Scanner input = new Scanner(System.in);
