@@ -4,6 +4,15 @@ public class Student extends Person {
 	private String studentID;
 	private int grade;
 
+	public Student(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public String getOccupation() {
 		return "Student";
@@ -40,6 +49,10 @@ public class Student extends Person {
 		this.grade = grade;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [" + lastName + ", " + firstName + "]";
+	}
 
 
 	public static void main(String[] args) {
@@ -57,6 +70,10 @@ public class Student extends Person {
 		s2.doHomeworks();
 		System.out.println(s2);
 
+	}
+	@Override
+	public double add(double x, double y) {
+		return x + y;
 	}
 
 }

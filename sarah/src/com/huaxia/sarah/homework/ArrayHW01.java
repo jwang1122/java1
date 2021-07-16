@@ -11,17 +11,18 @@ public class ArrayHW01 {
 	            1456, 2165, 1457, 2456};
 		System.out.printf("Original numeric array: %s\n", Arrays.toString(my_array1));
 		Arrays.sort(my_array1);
-		System.out.printf("Modified arr[] : %s", Arrays.toString(my_array1));
+		System.out.printf("Modified arr[] : %s\n", Arrays.toString(my_array1));
 		
 	    String[] my_array2 = {
 	            "Java",
-	            
 	            "Python",
 	            "PHP",
 	            "C#",
 	            "C Programming",
-	            "C++"
-	        };        
+	            "C++"}; 
+	    System.out.printf("Original string array: %s\n", Arrays.toString(my_array2));
+		Arrays.sort(my_array2);
+		System.out.printf("Modified arr[] : %s\n", Arrays.toString(my_array2));
 
 	}
 
