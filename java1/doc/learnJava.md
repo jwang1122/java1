@@ -26,6 +26,9 @@
 - [File Access](#file-access)
 - [OOP](#oop)
 - [class](#class)
+	- [Construtor](#construtor)
+	- [Class Inheritance](#class-inheritance)
+	- [Interface](#interface)
 - [Unit test](#unit-test)
 - [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
@@ -306,7 +309,7 @@ class A,B trycatch
 Object Oriented Programming concept
 
   ![](images/oop.png)
-1. Encapsulation: private, protected
+1. Encapsulation: private, protected, protect outside class using the attributes or methods unintentionally.
 ❓What is private modifier?
 >✔️private modifier make variable or method in the class can only be used within the class, which makes encapsulation possible.
 2. Abstraction: abstract object in the real world to write a class.
@@ -374,13 +377,95 @@ where the Student class is subclass of Person class, we call the Person as Super
 1. default constructor
 2. toString()
 
+❓What is construtor?
+✔️Constructor is used to create an instance of the class.
+### Construtor
+1. Constructor looks like a method which does NOT have return type since it always return the instance.
+2. Constructor can use public, package, private and protected modifier
+3. 😢👎If you defined your own constructor with arguments, the default constructor no longer works
+	- ✔️create a default constructor which does **NOT** have any aruments.
+	- ✔️add arguments when you call the constructor
+4. 👌You can define many different constructors which has different signature. 
+5. 😢Subclass can NOT use Superclass constructor.
+6. 😄Subclass can use public or protected methods defined in the superclass.
+7. 😢👎👎👎class defined in the same package can call protected method.
+8. 👍protected method cannot be called from different package.
+
+### Class Inheritance
+❓What is protected modifier?
+✔️protected modifier allow subclass to access the superclass attributes or methods. protect from using by other classes.
+
 [getter, setter, toString, default constructor](../src/com/huaxia/java1/Superclass1.java)
+
 ❓How do I create getter/setter?
-✔️
+✔️Right-Click where you want code generated ⟹ Source ⟹ Generate Getters/Setters...
+
 ❓How do I override toString() method?
-✔️
+✔️Right-Click where you want code generated ⟹ Source ⟹ Generate toString()...
+
 ❓Why I want to override toString()?
+✔️because each object want to have their own representation.
+
+* Subclass1 inherits from Superclass1 
+[Inherits attribute and mothod but not constructor](../src/com/huaxia/java1/Subclass1.java)
+💡❗️ In Java, it is not allowed multiple class inheritance, in other word, any class can only extends from one superclass.
+
+### Interface
+❓What is interface?
+✔️An interface is a completely "abstract class" that is used to group related methods signature without implementation.(with 😢empty bodies.) 👍collection of definition of methods.
+
+[Occupation](../src/com/huaxia/java1/Occupation.java)
+
+❓How do I create interface?
+✔️Right-click the package name ⟹ New ⟹ interface (or toolbar) 
+
+1. use **interface** keyword and interface name and {} to define an interface.
+2. 😄I cannot instantiate an interface.
+3. interface can define more than one abstract public methods.
+4. interface cannot implement method or get compiler error(Abstract methods do not specify a body).
+5. interface only defined abstract methods, all methods are public.
+6. you can define constant fields in interface.
+
+❓How do I use the interface?
+✔️**implements** the interface by class, a class can implements more than one interfaces.
+
+👇see the following sample code.
+[Person.java](../src/com/huaxia/java1/Person.java)
+
+5. 👇use **abstract** modifier to make the class abstract which allow no implementation of the abstract method defined in interface.👇see the following sample code.
+[Person.java](../src/com/huaxia/java1/Person.java)
+
+❓How do I implements unimplemented method?
+✔️Right-Click where you want code generated ⟹ Source ⟹ Override/implements Methods...
+
+❓What is abstract class?
+✔️Abstract class are similar to interfaces, you cannot instantiate them, and they may contain a mix of methods declared with or without an implementation. (to access those method, it must be inherited from another class)
+
+👇see the following sample code, it has getOccupation() and add() methods without emplementation and compareTo() implemented.
+
+[Person.java](../src/com/huaxia/java1/Person.java)
+
+1. it can define abstract method; 
+2. Cannot to be instantiated(Cannot instantiate the type Person); 
+3. only implements common used methods.
+[TestMethod.java](../src/com/huaxia/java1/TestMethod.java)
+
+❓What is abstract method?
 ✔️
+
+❓Which should I use, abstract class? or interface?
+✔️👇Consider using abstract class if any of these following statemens apply to your situation:
+1. I wang to share code among several closely related classes.
+2. I expect that classes that extend my abstract class have many common methods of fields, or require access modifiers other than public.
+3. I want to declare non-static or non-final fileds. This enables I to define methods that can acess and modify the state of the object to which they belong.
+✔️👇Consider using interfaces if any of these statements apply to my situation:
+1. I expect that unrelated classes would implement my interface. For example, the Comparable<T>
+2. I want to specify the behavior of a particular data type (class), but not concern about who implements its behavior.
+3. I want to take advantage of mulpile inheritance of data type(class) (🔥polymorphism) 👇see sample code below👇.
+
+[Person.java](../src/com/huaxia/java1/Person.java)
+
+[TestMethod.java](../src/com/huaxia/java1/TestMethod.java)
 
 ## Unit test
 
