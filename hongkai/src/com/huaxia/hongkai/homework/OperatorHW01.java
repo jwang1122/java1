@@ -1,6 +1,6 @@
 package com.huaxia.hongkai.homework;
 
-class ArithmeticDemo {
+class OperatorHW01 {
 
      public static void main (String[] args){
           

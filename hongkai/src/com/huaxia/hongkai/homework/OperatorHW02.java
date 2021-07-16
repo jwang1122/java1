@@ -1,6 +1,6 @@
 package com.huaxia.hongkai.homework;
 
-public class PrePostDemo {
+public class OperatorHW02 {
 	public static void main(String[] args){
         int i = 3;
         i++;
