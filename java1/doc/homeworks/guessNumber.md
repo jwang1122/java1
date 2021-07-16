@@ -1,0 +1,1 @@
+* Refer to GuessNumber.java, modify the code and allow two players play the guess number game, compete each other, the one who took less runs is the winner.
