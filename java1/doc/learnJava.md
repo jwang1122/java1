@@ -458,16 +458,21 @@ where the Student class is subclass of Person class, we call the Person as Super
 1. I wang to share code among several closely related classes.
 2. I expect that classes that extend my abstract class have many common methods of fields, or require access modifiers other than public.
 3. I want to declare non-static or non-final fileds. This enables I to define methods that can acess and modify the state of the object to which they belong.
+
 ✔️👇Consider using interfaces if any of these statements apply to my situation:
 1. I expect that unrelated classes would implement my interface. For example, the Comparable<T>
 2. I want to specify the behavior of a particular data type (class), but not concern about who implements its behavior.
-3. I want to take advantage of mulpile inheritance of data type(class) (🔥polymorphism) 👇see sample code below👇.
+3. I want to take advantage of mulpile inheritance of data type(class) 
+
+(🔥polymorphism) 👇see sample code below👇.
 
 [Person.java](../src/com/huaxia/java1/Person.java)
 
 [TestMethod.java](../src/com/huaxia/java1/TestMethod.java)
 
+
 ## Unit test
+
 
 ## Logging
 
