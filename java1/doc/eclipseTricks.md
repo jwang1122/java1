@@ -5,7 +5,6 @@
   - [Refresh project](#refresh-project)
   - [Format my Java code](#format-my-java-code)
   - [Questions & Answers](#questions--answers)
-  - [Generate getters and setters](#generate-getters-and-setters)
 
 
 ## change all variable names at same time
@@ -38,5 +37,5 @@ Ctrl+Shift+f
 * copy/paste **.class** file
 * remove .settings folder
 
-## Generate getters and setters
-Right-Click in Editor Window ⟹ Source ⟹ Generate getters and setters 
+* ❓How to Generate getters and setters
+✔️Right-Click in Editor Window ⟹ Source ⟹ Generate getters and setters 

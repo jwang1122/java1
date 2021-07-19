@@ -30,6 +30,14 @@ Expected Output
 
 public class Loop10 {
 
+	static String designLine(String writeItem, int num) {
+		String returnItem = "";
+		for (int i = 0; i < num; ++i) {
+			returnItem += writeItem;
+		}
+		return returnItem;
+	}
+
 	public static void main(String[] args) {
 		String str1 = designLine("* ", 6) + designLine("=", 34);
 		String str2 = " " + designLine("* ", 5) + " " + designLine("=", 34);
@@ -46,14 +54,6 @@ public class Loop10 {
 
 //		String a = "==================================";
 //		System.out.print(a.length());
-	}
-
-	static String designLine(String writeItem, int num) {
-		String returnItem = "";
-		for (int i = 0; i < num; ++i) {
-			returnItem += writeItem;
-		}
-		return returnItem;
 	}
 
 }

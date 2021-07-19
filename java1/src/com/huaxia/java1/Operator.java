@@ -54,6 +54,28 @@ public class Operator {
 		// ternary operator
 		x = a<b?a:b;
 		System.out.println(x);
+		
+		// bitwise operator: 
+		// &: bitwise and
+		// |: bitwise or
+		// ^: bitwise xor
+		// ~: bitwise compliment
+		byte b1 = 0b00111100;
+		System.out.println(formatByte(b1));
+		byte b2 = 0b00001101;
+		System.out.println(formatByte(b2));
+		byte b3 = (byte)(b1 & b2);
+		System.out.println(formatByte(b3));
+		b3 = (byte)(b1 | b2);
+		System.out.println(formatByte(b3));
+		b3 = (byte)(b1 ^ b2);
+		System.out.println(formatByte(b3));
+		b3 = (byte)(~b1);
+		System.out.println(formatByte(b3).substring(24,32));
 	}
 
+	static String formatByte(byte b) {
+		String s = String.format("%8s",Integer.toBinaryString(b));
+		return s.replace(' ', '0');
+	}
 }
