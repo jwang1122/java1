@@ -66,7 +66,7 @@ public class GuessNumber
 			}
 			else if(runsP1 < runsP2) 
 			{
-				System.out.println("Player 1 wins!");
+				System.out.println("Player 1 wins!"); 
 			}
 			else 
 			{
