@@ -1,6 +1,8 @@
 package com.huaxia.sarah;
 
-/*
+import java.util.Arrays;
+
+/**
  * To declare an array, define variable type with square brackets
  * 
  * int[] myIntegers;
@@ -33,6 +35,48 @@ public class Array {
 			h.sayHello();
 		}
 		System.out.println();
+		
+		// Change element inside array
+		System.out.println(helloes[1]); // print out individual element of array at index 1
+		Hello hello1 = helloes[1];
+		
+//		System.out.println(helloes[1].hashCode());
+//		System.out.println(hello1.hashCode());
+		
+		System.out.println("array element ID: " + helloes[1].hashCode());
+		System.out.println("Hello instance ID: " + hello1.hashCode());
+		
+		hello1.name = "Sarah";
+		System.out.println(hello1);
+		System.out.println(helloes[1]);
+		
+		type[3] = "Metal";
+		for(String cupType: type) {
+			System.out.print(cupType + ", ");
+		}
+		System.out.println();
+		
+		a[2] = 23;
+		for(int x : a) { // for-each: run through every element
+			System.out.print(x + " ");
+		}
+		System.out.println();
+		
+		// sort integer Array
+		System.out.printf("Original integer array: %s\n", Arrays.toString(a));
+		Arrays.sort(a);
+		System.out.printf("Sorted integer array: %s\n", Arrays.toString(a));
+		
+		// sort String Array
+		System.out.printf("Original String array: %s\n", Arrays.toString(type));
+		Arrays.sort(type);
+		System.out.printf("Sorted String array: %s\n", Arrays.toString(type));
+		
+		// sort Hello(the class we created) object array
+		System.out.printf("Original Hello array: %s\n", Arrays.toString(helloes));
+		Arrays.sort(helloes);
+		System.out.printf("Sorted Hello array: %s\n", Arrays.toString(helloes));
+	
 	}
 
 }

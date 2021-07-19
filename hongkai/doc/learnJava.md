@@ -19,12 +19,19 @@
 - [Loop](#loop)
 	- [For loop](#for-loop)
 	- [While loop](#while-loop)
+- [>Homework: make code change to two players](#homework-make-code-change-to-two-players)
 - [Method (Function)](#method-function)
 - [Simple Math](#simple-math)
-- [Exception](#exception)
+- [Exception and how to catch it](#exception-and-how-to-catch-it)
 - [File Access](#file-access)
 - [OOP](#oop)
 - [class](#class)
+	- [Construtor](#construtor)
+	- [Class Inheritance](#class-inheritance)
+	- [Interface](#interface)
+- [Unit test](#unit-test)
+- [Logging](#logging)
+- [Blackjack Card Game](#blackjack-card-game)
   
 
 
@@ -75,11 +82,19 @@ class Hello {
 	- Run menu ⟹ Run Configurations...
 	- Right-click in Editor window ⟹ Run As ⟹ Run Configurations...
 * ❓What is 'Run Configurations'?
+```answer
+	✔️
 	1. configure the main class (the class has main() method)
 	2. insert runtime arguments
 	3. pick different JRE library
 	4. modify dependencies
 	5. more ...
+```
+* ❓How many different comment? and What comment can do?
+>✔️
+
+* ❓How do I closs all other open files except my edit file?
+>✔️
 
 ## Variable naming
 1. variable name cannot start with number
@@ -224,13 +239,25 @@ class E,E1 end1
 
 * [for/while loop](../src/com/huaxia/hongkai/Loop.java)
 
+* [Guess number game](../src/com/huaxia/hongkai/GuessNumber.java)
 
+>Homework: make code change to two players
 ---
 [Table of Contents](#table-of-contents)
 
+```mermaid
+graph LR
+A[Java programming]
+C[class]
+M[methods]
+
+A--write-->C
+C--write-->M
+```
+
 ## Method (Function)
 * method has signature (finger print)
-* method overloading
+* method overloading (same name different signature)
 * ❓What is a static way of calling a method?
 * ✔️Use class name to call static method.
 * [Method in Java](../src/com/huaxia/hongkai/Method.java)
@@ -242,7 +269,39 @@ class E,E1 end1
 ## Simple Math
 * [Simple math: add, random, ](../src/com/huaxia/hongkai/SimpleMath.java)
 
-## Exception
+## Exception and how to catch it
+```mermaid
+graph TB
+A[try]
+TB1[try-block<br>good code]
+TB2[try-block<br>cause Exception]
+TB3[try-block<br>other code]
+B[catch]
+CB[catch-block]
+END[end]
+
+A-->TB1-->TB2-->B-->CB-->END
+A-->TB1-->TB3-->END
+
+classDef trycatch fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+
+class A,B trycatch
+```
+❓Why we need try-catch block?
+>✔️
+
+❓Why Exception in SimpleMath cause compiler error?
+>✔️
+
+❓Why Exception is generic Exception?
+>✔️All other Exception classes extends (**inherits**) from Exception class, catch Exception will catch them all.
+![](images/exception.png)
+
+1. catch generic Exception will catch all kinds of Exceptions
+2. you can catch specific Exception by specific name such as NullPointerException on purpose.
+3. you can catch more than one specific Exceptions
+
+[Exception](../src/com/huaxia/java1/Exception.java)
 
 ## File Access
 
@@ -250,7 +309,7 @@ class E,E1 end1
 Object Oriented Programming concept
 
   ![](images/oop.png)
-1. Encapsulation: private, protected
+1. Encapsulation: private, protected, protect outside class using the attributes or methods unintentionally.
 ❓What is private modifier?
 >✔️private modifier make variable or method in the class can only be used within the class, which makes encapsulation possible.
 2. Abstraction: abstract object in the real world to write a class.
@@ -313,3 +372,103 @@ where the Student class is subclass of Person class, we call the Person as Super
 [Test Polymorphism](../src/com/huaxia/test/TestMethod.java)
 
 ## class
+❓What functions defined in Object class which are useful for us?
+✔️the functions available in Object are
+1. default constructor
+2. toString()
+
+❓What is construtor?
+✔️Constructor is used to create an instance of the class.
+### Construtor
+1. Constructor looks like a method which does NOT have return type since it always return the instance.
+2. Constructor can use public, package, private and protected modifier
+3. 😢👎If you defined your own constructor with arguments, the default constructor no longer works
+	- ✔️create a default constructor which does **NOT** have any aruments.
+	- ✔️add arguments when you call the constructor
+4. 👌You can define many different constructors which has different signature. 
+5. 😢Subclass can NOT use Superclass constructor.
+6. 😄Subclass can use public or protected methods defined in the superclass.
+7. 😢👎👎👎class defined in the same package can call protected method.
+8. 👍protected method cannot be called from different package.
+
+### Class Inheritance
+❓What is protected modifier?
+✔️protected modifier allow subclass to access the superclass attributes or methods. protect from using by other classes.
+
+[getter, setter, toString, default constructor](../src/com/huaxia/hongkai/Superclass1.java)
+
+❓How do I create getter/setter?
+✔️Right-Click where you want code generated ⟹ Source ⟹ Generate Getters/Setters...
+
+❓How do I override toString() method?
+✔️Right-Click where you want code generated ⟹ Source ⟹ Generate toString()...
+
+❓Why I want to override toString()?
+✔️because each object want to have their own representation.
+
+* Subclass1 inherits from Superclass1 
+[Inherits attribute and mothod but not constructor](../src/com/huaxia/hongkai/Subclass1.java)
+💡❗️ In Java, it is not allowed multiple class inheritance, in other word, any class can only extends from one superclass.
+
+### Interface
+❓What is interface?
+✔️An interface is a completely "abstract class" that is used to group related methods signature without implementation.(with 😢empty bodies.) 👍collection of definition of methods.
+
+[Occupation](../src/com/huaxia/hongkai/Occupation.java)
+
+❓How do I create interface?
+✔️Right-click the package name ⟹ New ⟹ interface (or toolbar) 
+
+1. use **interface** keyword and interface name and {} to define an interface.
+2. 😄I cannot instantiate an interface.
+3. interface can define more than one abstract public methods.
+4. interface cannot implement method or get compiler error(Abstract methods do not specify a body).
+5. interface only defined abstract methods, all methods are public.
+6. you can define constant fields in interface.
+
+❓How do I use the interface?
+✔️**implements** the interface by class, a class can implements more than one interfaces.
+
+👇see the following sample code.
+[Person.java](../src/com/huaxia/hongkai/Person.java)
+
+5. 👇use **abstract** modifier to make the class abstract which allow no implementation of the abstract method defined in interface.👇see the following sample code.
+[Person.java](../src/com/huaxia/hongkai/Person.java)
+
+❓How do I implements unimplemented method?
+✔️Right-Click where you want code generated ⟹ Source ⟹ Override/implements Methods...
+
+❓What is abstract class?
+✔️Abstract class are similar to interfaces, you cannot instantiate them, and they may contain a mix of methods declared with or without an implementation. (to access those method, it must be inherited from another class)
+
+👇see the following sample code, it has getOccupation() and add() methods without emplementation and compareTo() implemented.
+
+[Person.java](../src/com/huaxia/hongkai/Person.java)
+
+1. it can define abstract method; 
+2. Cannot to be instantiated(Cannot instantiate the type Person); 
+3. only implements common used methods.
+[TestMethod.java](../src/com/huaxia/hongkai/TestMethod.java)
+
+❓What is abstract method?
+✔️
+
+❓Which should I use, abstract class? or interface?
+✔️👇Consider using abstract class if any of these following statemens apply to your situation:
+1. I wang to share code among several closely related classes.
+2. I expect that classes that extend my abstract class have many common methods of fields, or require access modifiers other than public.
+3. I want to declare non-static or non-final fileds. This enables I to define methods that can acess and modify the state of the object to which they belong.
+✔️👇Consider using interfaces if any of these statements apply to my situation:
+1. I expect that unrelated classes would implement my interface. For example, the Comparable<T>
+2. I want to specify the behavior of a particular data type (class), but not concern about who implements its behavior.
+3. I want to take advantage of mulpile inheritance of data type(class) (🔥polymorphism) 👇see sample code below👇.
+
+[Person.java](../src/com/huaxia/hongkai/Person.java)
+
+[TestMethod.java](../src/com/huaxia/hongkai/TestMethod.java)
+
+## Unit test
+
+## Logging
+
+## Blackjack Card Game
