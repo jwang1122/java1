@@ -1,6 +1,6 @@
 package com.huaxia.java1;
 
-public abstract class Person implements Occupation, Comparable<Person>{
+public abstract class Person implements Occupation, Comparable<Person>{ // abstract is a modifier
 	protected String firstName;
 	protected String lastName;
 	protected String ssn;

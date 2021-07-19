@@ -16,16 +16,16 @@ public class Dice
 			input.nextLine();
 			int dice1 = rand.nextInt(6) + 1;
 			int dice2 = rand.nextInt(6) + 1;
-			System.out.println(dice1 + " + " + dice2 + " = " + (dice1 + dice2));
+			int P1 = dice1 + dice2;
+			System.out.println(dice1 + " + " + dice2 + " = " + P1);
 		
 			System.out.print("Connor's turn: ");
 			input.nextLine();
 			int dice3 = rand.nextInt(6) + 1;
 			int dice4 = rand.nextInt(6) + 1;
-			System.out.println(dice3 + " + " + dice4 + " = " + (dice3 + dice4));
-		
-			int P1 = dice1 + dice2;
 			int P2 = dice3 + dice4;
+			System.out.println(dice3 + " + " + dice4 + " = " + P2);
+		
 			if(P1 > P2) 
 			{
 				System.out.println("John wins!");
@@ -40,7 +40,7 @@ public class Dice
 			}
 			System.out.println("Do you want to continue?(Y/N)");
 			String answer = input.nextLine();
-			if(answer.equals("N")) 
+			if(answer.toUpperCase().equals("N")) 
 			{
 				playing = false;
 			}

@@ -470,9 +470,67 @@ where the Student class is subclass of Person class, we call the Person as Super
 
 [TestMethod.java](../src/com/huaxia/java1/TestMethod.java)
 
+```mermaid
+classDiagram
+
+class Sum{
+	abstract sumOfTwo(int, int)
+	abstract sumOfThree(int, int, int)
+
+	display()
+}
+<<abstract>> Sum
+```
+where abstract class Sum has two abstract methods, and one concrete method display.
+1. Sum cannot be instantiated.
+2. I want subclass to implement calculation.
+3. I want Sum do the display.
+
+[Abstract Sum class](../src/com/huaxia/java1/AbstractSum.java)
+[Concrete Sum class](../src/com/huaxia/java1/ConcreteSum.java)
+
+❓What is placeholder for printf()?
+✔️
+
+❓How do I find all possible plachholder?
+✔️[Java API Document](https://docs.oracle.com/javase/8/docs/api/) ⟹ java.util
+Class Formatter
+
+❓What is method **overloading**?
+✔️
+
+❓What is method **overridden**?
+✔️
+
+```mermaid
+graph LR
+
+A([Software Project])
+B[User Interface<br>GUI Front End]
+C[Business Logic<br>middle tier]
+D[Database<br>Back End]
+E[Unit test]
+F[Logging]
+G[Window Based<br>Eclipse IDE]
+H[Web Based<br>Google, Amazon]
+I[MongoDB]
+J[SQL Server]
+
+A-->B & C & D & E & F
+B-->G & H
+D-->I & J
+
+classDef block1 fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+
+class C,E,F block1
+```
 
 ## Unit test
+❓What is Unit test?
 
+❓Why I need Unit test?
+
+❓Why the Unit test always to setup() before test method?
 
 ## Logging
 
