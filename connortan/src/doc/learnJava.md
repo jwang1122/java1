@@ -458,41 +458,14 @@ where the Student class is subclass of Person class, we call the Person as Super
 1. I want to share code among several closely related classes
 2. I expect that classes that extends my abstract class have many common methods of fields, or require access modifiers other than public
 3. I want to declare, non-static or non-final fields. This enables me to define methods that can access and modify the stat of the object to which they belong
-   
 ✔️👇Consider using interfaces if any of these statements apply to my situation:
 1. I expect that unrelated classes would implement my interface. For example, the Comparable<T>
 2. I want to specify tge behavior of a particular data type (class), but not concern about who implements its behavior
-3. I want to take advantage of multiple inheritance of data type (class) 
-
-(🔥polymorphism) 👇see sample code below👇.
+3. I want to take advantage of multiple inheritance of data type (class) (🔥polymorphism) 👇see sample code below👇.
 
 [Person.java](../src/com/../../java1/Person.java)
 
 [TestMethod.java](..src/com/../../../java1/TestMethod.java)
-
-```mermaid
-classDiagram
-
-class Sum {
-	abstract sumOfTwo(int, int)
-	abstract sumOfThree(int, int, int)
-
-	display()
-}
-<<abstract>> Sum
-```
-where abstract class Sum has two abstract methods, and one concrete methid display
-1. Sum cannot be instantiated
-2. I want subclass to implement calculation
-3. I want Sum do the display
-   
-❓What is place holder for printf()?
-✔️
-
-❓How di I find all possible placeholder?
-✔️[Java API Document](https://docs.oracle.com/javase/8/docs/api/) => java.util
-Class Formatter
-
 
 ## Unit test
 

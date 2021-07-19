@@ -1,4 +1,4 @@
-package com.huaxia.java1;
+package java1;
 
 /*
  * This is my first Java program Hello.java I've ever written

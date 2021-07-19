@@ -1,4 +1,4 @@
-package com.huaxia.java1;
+package java1;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -25,8 +25,7 @@ public class SimpleMath {
 	}
 
 	// Homework: make two players against each other
-	static void throw2Dices() { // build a real game, get name from players, take turn until user terminate the
-								// game. Hint: while(true){}
+	static void throw2Dices() { // build a real game, get name from players, take turn until user terminate the game. Hint: while(true){}
 		Random rand = new Random();
 		Scanner input = new Scanner(System.in);
 		System.out.print("John's turn: ");
@@ -55,27 +54,27 @@ public class SimpleMath {
 	}
 
 	// none static method
-	// Prime numbers are numbers that have only 2 factors: 1 and themselves.
+	//Prime numbers are numbers that have only 2 factors: 1 and themselves. 
 	boolean isPrime(int n) {
 		boolean result = true;
-		for (int i = 2; i < n; i++) {
-			if (n % i == 0) {
-				result = false;
+		for(int i=2; i<n; i++) {
+			if(n%i==0) {
+				result = false;	
 				break;
 			}
 		}
-		return n != 1 && result;
+		return n!=1 && result;
 	}
-
-	double circleArea(double r) throws InvalidMidDataException { // re-throw the Exception
+	
+	double circleArea(double r) throws InvalidMidiDataException { // re-throw the Exception
 //		String s = null;
 //		s.substring(1,4);
-		if (r < 0) {
-			throw new Exception("Radiu of circle cannot be negative.");
+		if(r<0) {
+			throw new InvalidMidiDataException("Radius of circle cannot be negative. r=" + r);
 		}
 		return Math.PI * r * r;
 	}
-
+	
 	public static void main(String[] args) {
 		// the main method provide place for you to test you code above
 //		doMath();
@@ -88,15 +87,16 @@ public class SimpleMath {
 		double r = -2;
 		try { // try-block
 			double area = obj.circleArea(r); // good code
-			System.out.println(area);		 // other code
-		} catch (Exception ex) { // Excpetion class defined in the same package will have first priority
+			System.out.println(area);        // other code
+		}catch (java.lang.Exception ex) { // Exception class defined in the same package will have first priority
 			System.out.println(ex);
 		}
-//		} catch (InvalidMidDataException ex) { // catch-block
+//		}catch(InvalidMidiDataException ex) { // catch-block
 //			System.out.println(ex);
-//		} catch (NullPointerException np) { // catch-block
-//					System.out.println(np);
+//		}catch(NullPointerException np) {
+//			System.out.println(np);
 //		}
 		System.out.println("END");
 	}
+
 }

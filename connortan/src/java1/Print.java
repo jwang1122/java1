@@ -1,4 +1,4 @@
-package com.huaxia.java1;
+package java1;
 
 /**
  * This is my Print class to show all of the print functions

@@ -1,4 +1,4 @@
-package com.huaxia.java1;
+package java1;
 
 /** 
  * Abstract object in real world to our class (Abstraction)

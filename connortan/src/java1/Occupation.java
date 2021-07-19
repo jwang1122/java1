@@ -1,4 +1,4 @@
-package com.huaxia.connortan.homeworks;
+package java1;
 
 // interface only provide abstract methods
 public interface Occupation {

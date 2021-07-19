@@ -1,4 +1,4 @@
-package com.huaxia.java1;
+package java1;
 
 public abstract class Person implements Occupation, Comparable<Person>{
 	protected String firstName;

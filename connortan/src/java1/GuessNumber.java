@@ -1,4 +1,4 @@
-package com.huaxia.connortan.homeworks;
+package java1;
 
 import java.util.Random;
 import java.util.Scanner;

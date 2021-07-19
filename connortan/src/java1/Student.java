@@ -1,11 +1,18 @@
-package com.huaxia.java1;
+package java1;
 
 public class Student extends Person { // is relation? the Student is a Person
 	private String studentID;
 	private int grad;
 	
-	public Student(String firstname)
-	
+	public Student(String firstname, String lastname) {
+		this.firstName = firstname;
+		this.lastName = lastname;
+	}
+
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public String getOccupation() {
 		return "Student";
@@ -39,10 +46,12 @@ public class Student extends Person { // is relation? the Student is a Person
 		this.grad = grad;
 	}
 
+
 	@Override
-	public String toStirng() {
-		return "Student ["+ lastName + firstName]
+	public String toString() {
+		return "Student ["+ lastName +", "+ firstName +"]";
 	}
+
 	public static void main(String[] args) {
 		Student s1 = new Student();
 		s1.setFirstName("John");
@@ -58,12 +67,11 @@ public class Student extends Person { // is relation? the Student is a Person
 		s2.doHomeworks();
 		System.out.println(s2);
 
-		
 	}
-	
+
 	@Override
-	public double add(double x, double y);
-	// TODO Auto-generated method stub
-	return x + y;
-	
+	public double add(double x, double y) {
+		// TODO Auto-generated method stub
+		return x + y;
+	}
 }

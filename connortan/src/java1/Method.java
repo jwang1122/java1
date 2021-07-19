@@ -1,4 +1,4 @@
-package com.huaxia.java1;
+package java1;
 
 /**
  * Method signature: 
