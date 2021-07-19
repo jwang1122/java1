@@ -1,9 +1,10 @@
 package com.huaxia.java1;
 
-public class Student extends Person {
+public class Student extends Person { // is relation? the Student is a Person
 	private String studentID;
 	private int grad;
 	
+	public Student(String firstname)
 	
 	@Override
 	public String getOccupation() {
@@ -38,7 +39,10 @@ public class Student extends Person {
 		this.grad = grad;
 	}
 
-
+	@Override
+	public String toStirng() {
+		return "Student ["+ lastName + firstName]
+	}
 	public static void main(String[] args) {
 		Student s1 = new Student();
 		s1.setFirstName("John");
@@ -54,5 +58,12 @@ public class Student extends Person {
 		s2.doHomeworks();
 		System.out.println(s2);
 
+		
 	}
+	
+	@Override
+	public double add(double x, double y);
+	// TODO Auto-generated method stub
+	return x + y;
+	
 }

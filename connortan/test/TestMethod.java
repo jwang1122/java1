@@ -13,7 +13,7 @@ import com.huaxia.java1.Teacher;
 public class TestMethod {
 	
 	//ask same question for different classes: polymorphism
-	static void printOccupation(Person p) {
+	static void printOccupation(Person p) { // p could be teacher or student since both extends from Person
 	System.out.println(p.getFirstName() + ": " + p.getOccupation());
 	}
 	public static void main(String[] args) {

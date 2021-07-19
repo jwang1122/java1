@@ -6,7 +6,7 @@
 - [Java API Documentation](#java-api-documentation)
 - [First Java Program](#first-java-program)
 - [Getting Start](#getting-start)
-- [Basic skills](#basic-skills)
+- [Basic skills(questions and answers)](#basic-skillsquestions-and-answers)
 - [Variable naming](#variable-naming)
 - [Variable and Memory](#variable-and-memory)
 - [Comments](#comments)
@@ -19,12 +19,16 @@
 - [Loop](#loop)
 	- [For loop](#for-loop)
 	- [While loop](#while-loop)
+- [>Homework: make code change to two players compete each other.](#homework-make-code-change-to-two-players-compete-each-other)
 - [Method (Function)](#method-function)
 - [Simple Math](#simple-math)
-- [Exception](#exception)
+- [Exception and how to catch it](#exception-and-how-to-catch-it)
 - [File Access](#file-access)
 - [OOP](#oop)
 - [class](#class)
+	- [Construtor](#construtor)
+	- [Class Inheritance](#class-inheritance)
+	- [Interface](#interface)
 - [Unit test](#unit-test)
 - [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
@@ -48,7 +52,7 @@ class Hello {
 
 ## Getting Start
 ❓✔️❌
-## Basic skills
+## Basic skills(questions and answers)
 * ❓What is the method signature?
 >✔️1. method name; 2. argument type and number of arguments; 3. maybe return type
 * ❓What are the modifiers?
@@ -78,11 +82,19 @@ class Hello {
 	- Run menu ⟹ Run Configurations...
 	- Right-click in Editor window ⟹ Run As ⟹ Run Configurations...
 * ❓What is 'Run Configurations'?
+```answer
+	✔️
 	1. configure the main class (the class has main() method)
 	2. insert runtime arguments
 	3. pick different JRE library
 	4. modify dependencies
 	5. more ...
+```
+* ❓How many different comment? and What comment can do?
+>✔️
+
+* ❓How do I closs all other open files except my edit file?
+>✔️
 
 ## Variable naming
 1. variable name cannot start with number
@@ -153,7 +165,7 @@ Array is a special data type, which contains a list of element of all kinds data
 * Sort integer Array: Arrays.sort(<array>)
 * Sort String Array: Arrays.sort(<String array>)
 * Sort Any class you defined(Hello): Arrays.sort(), implements Comparable ⟹ create compareTo(Object obj) method in your class(Hello). Then sort by name, or by age, which are different attributes of the Hello class. [Hello.java](../src/com/huaxia/java1/Hello.java)
-  
+
 ## ArrayList
 ArrayList is JDK build in class, which is resizable-array implementation of the List interface.
 
@@ -217,23 +229,35 @@ class E,E1 end1
 ## Loop
 ### For loop
 
-![](images/Loop.svg)
+![](images/../../images/Loop.svg)
 
 ### While loop
     
-![](images/while.svg)
+![](images/../../images/while.svg)
 
-![](images/DoWhile.svg)
+![](images/../../images/DoWhile.svg)
 
 * [for/while loop](../src/com/huaxia/java1/Loop.java)
 
+* [Guess number game](../src/com/huaxia/java1/GuessNumber.java)
 
+>Homework: make code change to two players compete each other.
 ---
 [Table of Contents](#table-of-contents)
 
+```mermaid
+graph LR
+A[Java programming]
+C[class]
+M[methods]
+
+A--write-->C
+C--write-->M
+```
+
 ## Method (Function)
 * method has signature (finger print)
-* method overloading
+* method overloading (same name different signature)
 * ❓What is a static way of calling a method?
 * ✔️Use class name to call static method.
 * [Method in Java](../src/com/huaxia/java1/Method.java)
@@ -245,7 +269,39 @@ class E,E1 end1
 ## Simple Math
 * [Simple math: add, random, ](../src/com/huaxia/java1/SimpleMath.java)
 
-## Exception
+## Exception and how to catch it
+```mermaid
+graph TB
+A[try]
+TB1[try-block<br>good code]
+TB2[try-block<br>cause Exception]
+TB3[try-block<br>other code]
+B[catch]
+CB[catch-block]
+END[end]
+
+A-->TB1-->TB2-->B-->CB-->END
+A-->TB1-->TB3-->END
+
+classDef trycatch fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+
+class A,B trycatch
+```
+❓Why we need try-catch block?
+>✔️
+
+❓Why Exception in SimpleMath cause compiler error?
+>✔️
+
+❓Why Exception is generic Exception?
+>✔️All other Exception classes extends (**inherits**) from Exception class, catch Exception will catch them all.
+![](images/exception.png)
+
+1. catch generic Exception will catch all kinds of Exceptions
+2. you can catch specific Exception by specific name such as NullPointerException on purpose.
+3. you can catch more than one specific Exceptions
+
+[Exception](../src/com/huaxia/java1/Exception.java)
 
 ## File Access
 
@@ -253,7 +309,7 @@ class E,E1 end1
 Object Oriented Programming concept
 
   ![](images/oop.png)
-1. Encapsulation: private, protected
+1. Encapsulation: private, protected, protect outside class using the attributes or methods unintentionally.
 ❓What is private modifier?
 >✔️private modifier make variable or method in the class can only be used within the class, which makes encapsulation possible.
 2. Abstraction: abstract object in the real world to write a class.
@@ -311,11 +367,105 @@ where the Student class is subclass of Person class, we call the Person as Super
 * [Student, Subclass of Person](../src/com/huaxia/java1/Student.java)
 * [Teacher, Subclass of Person](../src/com/huaxia/java1/Teacher.java)
 
-4. Polymorphism: give different answer for the same question from different class. (异类同功)
+4. Polymorphism: give different answer for the same question from different classes which inherit from same superclas or interface. (异类同功)
    
 [Test Polymorphism](../src/com/huaxia/test/TestMethod.java)
 
 ## class
+❓What functions defined in Object class which are useful for us?
+✔️the functions available in Object are
+1. default constructor
+2. toString()
+
+❓What is construtor?
+✔️Constructor is used to create an instance of the class.
+### Construtor
+1. Constructor looks like a method which does NOT have return type since it always return the instance.
+2. Constructor can use public, package, private and protected modifier
+3. 😢👎If you defined your own constructor with arguments, the default constructor no longer works
+	- ✔️create a default constructor which does **NOT** have any aruments.
+	- ✔️add arguments when you call the constructor
+4. 👌You can define many different constructors which has different signature. 
+5. 😢Subclass can NOT use Superclass constructor.
+6. 😄Subclass can use public or protected methods defined in the superclass.
+7. 😢👎👎👎class defined in the same package can call protected method.
+8. 👍protected method cannot be called from different package.
+   
+### Class Inheritance
+❓What is protected modifier?
+✔️protected modifier allow subclass to access the superclass attributes or methods. protect from using by other classes.
+
+[getter, setter, toString, default constructor](../src/com/huaxia/java1/Superclass1.java)
+
+❓How do I create getter/setter?
+✔️ Right-Click where you want code generated ⟹ Source ⟹ Generate Getters/Setters...
+
+❓How do I override toString() method?
+✔️Right-Click where you want code generated ⟹ Source ⟹ Generate toString()...
+
+❓Why I want to override toString()?
+✔️because each object want to have their own representation.
+
+* Subclass1 inherits from Superclass1
+[Inherits attribute and mothod but not constructor](../src/com/huaxia/java1/Subclass1.java)
+💡❗️ In Java, it is not allowed multiple class inheritance, in other word, any class can only extend from one superclass.
+
+### Interface
+❓What is interface?
+✔️An interface is a completely "abstract class" that is used to group related methods signature without implementation.(with 😢empty bodies.) 👍collection of definition of methods.
+
+[Occupation](../src/com/huaxia/connortan/homeworks/Occupation.java)
+
+❓How do I create interface?
+✔️ Right-Click the package name ⟹ New ⟹ interface (or toolbar)
+
+1. use **interface** keywaord and interface name and {} to define an interface.
+2. 😄I cannot instantiate an interface.
+3. instance can define more than one methods.
+4. instance cannot implement the method or get compiler error(Abstract methods do not specify a body).
+5. interface only defined abstract methods, all methods are public
+6. you can define constant fields in interface
+
+❓How do I use the interface?
+✔️**implements** the interface by class
+
+👇see the following sample code
+[Person.java](../src/com/../../java1/Person.java)
+
+1. 👇use **abstract** modifier to make the class abstract which allow no implementation of the abstract method defined in interface.👇 see the following sample code
+[Person.java](../src/com/../../java1/Person.java)
+ 
+❓How do I implement unimplemented method?
+✔️ Right-Click where you want code generated ⟹ Source ⟹ Oberride/implement methods...
+
+❓What is abstract class?
+✔️Abstract class are similar to interface, you cannot instantiate then, and theu may contain a mix of methods declare with or without an implementation. (to access those method, it must be inherited from another class)
+
+👇see the following sample code, it has getOccupation() and add() method without implementaion and compareTo() implemented
+
+[Person.java](../src/com/../../java1/Person.java)
+
+1. it can define abstract method; 
+2. avoid to be instantiated(Cannot instantiate the type Person); 
+3. only implements common used methods.
+[TestMethod.java](..src/com/../../../java1/TestMethod.java)
+
+❓What is abstract method?
+✔️
+
+❓Which should I use, abstract class? or interface?
+✔️Consider using abstract class if any of these folowing statemens apply to your situation:
+1. I want to share code among several closely related classes
+2. I expect that classes that extends my abstract class have many common methods of fields, or require access modifiers other than public
+3. I want to declare, non-static or non-final fields. This enables me to define methods that can access and modify the stat of the object to which they belong
+✔️👇Consider using interfaces if any of these statements apply to my situation:
+1. I expect that unrelated classes would implement my interface. For example, the Comparable<T>
+2. I want to specify tge behavior of a particular data type (class), but not concern about who implements its behavior
+3. I want to take advantage of multiple inheritance of data type (class) (🔥polymorphism) 👇see sample code below👇.
+
+[Person.java](../src/com/../../java1/Person.java)
+
+[TestMethod.java](..src/com/../../../java1/TestMethod.java)
 
 ## Unit test
 
