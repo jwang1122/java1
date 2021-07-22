@@ -32,6 +32,8 @@
 - [Unit test](#unit-test)
 - [Logging](#logging)
 - [Blackjack Card Game](#blackjack-card-game)
+	- [Blackjack Rules](#blackjack-rules)
+	- [Object relationship](#object-relationship)
   
 
 
@@ -230,6 +232,60 @@ class E,E1 end1
 ### For loop
 
 ![](images/Loop.svg)
+* Break on for-loop
+  
+```mermaid
+graph TB
+
+A([Loop])
+B{loop<br>condition<br>i<=10}
+C[code block 1<br>line-51]
+D{break<br>condition<br>line-52}
+F[code block 2<br>line-55]
+E[END<br>line-57]
+
+A-->B
+B--false-->E
+B--true-->C-->D
+D--true-->E
+D--false-->F-->B
+
+classDef if fill:#EBCD6F,stroke:black,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px,color:white;
+
+class B,D if
+class E end1
+class A start
+```
+
+* continue on for-loop
+  
+```mermaid
+graph TB
+
+A([Loop])
+B{loop<br>condition<br>i<=10}
+C[code block 1<br>line-41]
+D{continue<br>condition<br>line-42}
+F[code block 2<br>line-45]
+E[END<br>line-47]
+
+A-->B
+B--false-->E
+B--true-->C-->D
+D--true-->B
+D--false-->F-->B
+
+classDef if fill:#EBCD6F,stroke:black,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px,color:white;
+
+class B,D if
+class E end1
+class A start
+
+```
 
 ### While loop
     
@@ -527,11 +583,113 @@ class C,E,F block1
 
 ## Unit test
 ❓What is Unit test?
+>✔️A unit is a specific piece of code need to be tested, such as a function or a class.  in our sample code, isPrime() method is a code unit. The Unit test are then other piece of code that specifically exercise the code unit with a **full range** of different inputs.
 
 ❓Why I need Unit test?
 
-❓Why the Unit test always to setup() before test method?
+```mermaid
+graph TB
+
+A(["Software Application (Project)"])
+B["Method (Unit)"]
+C["Class (Unit)"]
+
+A--build by--> B & C
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+
+class B,C html
+```
+✔️In order to make the software application work properly, we need first make sure every unit (method, class) works properly.
+
+❓Why the Unit test always run setup() method before other test method?
+✔️because we want make sure every test method has same initial status.
 
 ## Logging
+❓What is logging in programming?
+✔️Logging is keeping a record of all data input, processes, data output, and final results in a program to console, files or database.
+
+❓Why we need logging in program?
+✔️There are multpile reasons for whay we may need to capture the application activity.
+1. Recording unusual circumstances or errors that may be happing in the program.
+2. Getting the info about shats going in the application.
+
+[Simple log to console](../src/com/huaxia/java1/LoggerExample1.java)
+[log to file](../src/com/huaxia/java1/LoggerExample2.java)
 
 ## Blackjack Card Game
+[Blackjack Rules](https://bicyclecards.com/how-to-play/blackjack/)
+❓How to play Blackjack game?
+✔️
+### Blackjack Rules
+* [Black Jack Rules](https://bicyclecards.com/how-to-play/blackjack/)
+1. Object of the game: 
+>beat the dealer by getting a count as close to 21 as possible, without going over 21
+2. Card Values 
+>ace is worth 1 or 11, J,Q,K are 10, other card is its pip value
+3. Betting
+>for simplicity, we don't bet.
+4. Shuffle and cut
+>the dealer shuffles the pack of card, no need player cut
+5. Deal
+>dealer gives one card face up to each player, and one card face up for himself. Another round of cards is then dealt face up to each player, but the dealer takes the second card face down.
+6. Naturals
+>If a player's first two cards are an ace and a "ten-card" (a picture card or 10), giving a count of 21 in two cards, this is a natural or "blackjack." If any player has a natural and the dealer does not, the dealer lose.  If the dealer has a natural, other doesn't, dealer win. If both dealer and player have natural, no body wins.
+7. The Play
+>any player on his turn must decide whether to "stand" (not ask for another card) or "hit" (ask for another card in an attempt to get closer to a count of 21, or even hit 21 exactly). Thus, a player may stand on the two cards originally dealt to them, or they may ask the dealer for additional cards, one at a time, until deciding to stand on the total (if it is 21 or under), or goes "bust" (if it is over 21). In the latter case, play loses the game. The dealer then turns to the next player and serves them in the same manner. The combination of an ace with a card other than a ten-card is known as a "soft hand," because the player can count the ace as a 1 or 11, and either draw cards or not. For example with a "soft 17" (an ace and a 6), the total is 7 or 17. While a count of 17 is a good hand, the player may wish to draw for a higher total. If the draw creates a bust hand by counting the ace as an 11, the player simply counts the ace as a 1 and continues playing by standing or "hitting" (asking the dealer for additional cards, one at a time).
+8. The Dealer's Play
+>When the dealer has served every player, the dealers face-down card is turned up. If the total is 17 or more, it must stand. If the total is 16 or under, they must take a card. The dealer must continue to take cards until the total is 17 or more, at which point the dealer must stand. If the dealer has an ace, and counting it as 11 would bring the total to 17 or more (but not over 21), the dealer must count the ace as 11 and stand. The dealer's decisions, then, are automatic on all plays, whereas the player always has the option of taking one or more cards.
+9. No Splitting Pairs
+10. No Doubing Down
+11. No Insurance
+12. Reshuffling when start new game.
+
+### Object relationship
+  
+```mermaid
+classDiagram
+class Card {
+  face:str
+  suit:str
+  getValue()
+}
+
+class BlackjackCard{
+  getValue()
+}
+
+class Deck{
+  currentIndex:int
+  stackOfCards:ArrayList<BlackjackCard>
+  shuffle()
+  nextCard()
+}
+
+class Player{
+  name:str
+  hand:[]
+  win:int
+  addCardToHand()
+  cleanHand()
+  getHandValue()
+  getHandSize()
+  hit()
+  showHand()
+}
+
+class Dealer {
+  deck:Deck
+  hand:[]
+  win:int
+  shuffle()
+  deal()
+  hit()
+  showHand()
+}
+
+Player<|--Dealer:dealer is player
+Dealer *--Deck:dealer own the deck
+Card<|--BlackjackCard:is
+Deck o--BlackjackCard:stack of Cards
+```
+

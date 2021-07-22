@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-07-20T15:52:43.626696Z</date>
+  <millis>1626796363626</millis>
+  <nanos>696000</nanos>
+  <sequence>2</sequence>
+  <logger>JWang</logger>
+  <level>SEVERE</level>
+  <class>com.huaxia.java1.LoggerExample2</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" because "null" is null</message>
+</record>
+</log>

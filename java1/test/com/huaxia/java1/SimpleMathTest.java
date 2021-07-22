@@ -9,16 +9,19 @@ import org.junit.jupiter.api.Test;
 
 class SimpleMathTest {
 	SimpleMath sm;
+	double x;
+	double y;
 	
 	@BeforeEach
 	void setUp(){
 		sm = new SimpleMath();
+		x = 1.1;
+		y = 2.2;
 	}
 
 	@Test
 	void testAdd() {
-		double x = 1.1;
-		double y = 2.2;
+		x = 4.5;
 		double expected = x + y;
 		double actual = SimpleMath.add(x, y);
 		assertTrue(expected==actual);
@@ -26,8 +29,6 @@ class SimpleMathTest {
 	
 	@Test 
 	void testSub() {
-		double x = 2.2;
-		double y = 1.1;
 		double expected = x - y;
 		double actual = sm.sub(x,y);
 		assertTrue(expected==actual);
@@ -36,15 +37,15 @@ class SimpleMathTest {
 	// TDD: Test Driving Development 
 	@Test
 	void testIsPrime() {
-		int a = 9;
+		int a = 9; // positive number which is not prime number
 		assertFalse(sm.isPrime(a));
-		a = 1;
+		a = 1; // special number, is not prime number
 		assertFalse(sm.isPrime(a));
-		a = 2;
+		a = 2; // prime number
 		assertTrue(sm.isPrime(a));
-		a = 0;
+		a = 0; // special number, is not prime number
 		assertFalse(sm.isPrime(a));
-		a = -2;
+		a = -2; // negative number
 		assertFalse(sm.isPrime(a));
 	}
 	
@@ -61,6 +62,18 @@ class SimpleMathTest {
 	}
 
 	@Test
+	void testCircleAreaWithZeroR() {
+		double r = 0; // 0 is very special case
+		double expected = 0;
+		try {
+			double actual = sm.circleArea(r);
+			assertTrue(actual==expected);
+		}catch(InvalidMidiDataException ex) {
+			System.out.println(ex);
+		}
+	}
+
+	@Test
 	void testCircleAreaWithNegativeR() {
 		double r = -1.1;
 		double expected = Math.pow(r, 2) * Math.PI;
@@ -68,8 +81,19 @@ class SimpleMathTest {
 			double actual = sm.circleArea(r);
 			assertTrue(actual==expected);
 		}catch(InvalidMidiDataException ex) {
-			System.out.println(ex);
+			System.out.println(ex); // this is not good in real case
 		}
+	}
+	
+	@Test
+	void testExceptionForCircleArea() {
+		InvalidMidiDataException exception = assertThrows(InvalidMidiDataException.class, ()->{
+			double area = sm.circleArea(-2.9);
+			System.out.println(area);
+		});
+		String expected = "Radius of the circle cannot be negative.";
+		String actual = exception.getMessage();
+		assertTrue(actual.contains(expected));
 	}
 
 }

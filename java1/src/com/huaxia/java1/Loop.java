@@ -11,7 +11,7 @@ public class Loop {
 		}
 		System.out.println();
 		
-		// for loop with neigative step
+		// for loop with negative step
 		int i = 10;
 		for (;i>0; i--) { // initialize looping variable; condition on looping variable; adjust looping variable
 			System.out.print(i + ", ");

@@ -72,10 +72,8 @@ public class SimpleMath {
 	}
 	
 	double circleArea(double r) throws InvalidMidiDataException { // re-throw the Exception
-//		String s = null;
-//		s.substring(1,4);
 		if(r<0) {
-			throw new InvalidMidiDataException("Radius of circle cannot be negative. r=" + r);
+			throw new InvalidMidiDataException("Radius of the circle cannot be negative. r=" + r);
 		}
 		return Math.PI * r * r;
 	}
