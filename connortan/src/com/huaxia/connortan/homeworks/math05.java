@@ -2,14 +2,17 @@ package com.huaxia.connortan.homeworks;
 
 import java.util.Scanner;
 
-public class math05 {
-	
-	public static void main(String args) {
-		Scanner inout = new Scanner(System.in);
-				System.out.print("Enter radius if a sphere 1.1):");
-				double r = input.nextDouble();
-				input.close();
-				
+public class math05 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the radius of a circle: ");
+		double radius = input.nextDouble();
+		double volume = 4.0/3.0 * Math.PI * Math.pow(radius, 3);
+		System.out.printf("The sphere with radius %.3f is %.3f", radius, volume);
+		input.close();
 	}
 
 }

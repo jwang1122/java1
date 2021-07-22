@@ -10,6 +10,10 @@ public class SimpleMath {
 	public static double add(double x, double y) {
 		return x + y;
 	}
+	
+	public double sub(double x, double y) {
+		return x - y;
+	}
 
 	static void doMath() {
 		double x = SimpleMath.add(3, 4); // static way to call add()
@@ -56,6 +60,7 @@ public class SimpleMath {
 	// none static method
 	//Prime numbers are numbers that have only 2 factors: 1 and themselves. 
 	boolean isPrime(int n) {
+		if (n <= 0) return false;
 		boolean result = true;
 		for(int i=2; i<n; i++) {
 			if(n%i==0) {
@@ -67,10 +72,8 @@ public class SimpleMath {
 	}
 	
 	double circleArea(double r) throws InvalidMidiDataException { // re-throw the Exception
-//		String s = null;
-//		s.substring(1,4);
 		if(r<0) {
-			throw new InvalidMidiDataException("Radius of circle cannot be negative. r=" + r);
+			throw new InvalidMidiDataException("Radius of the circle cannot be negative. r=" + r);
 		}
 		return Math.PI * r * r;
 	}
